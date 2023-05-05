@@ -1,0 +1,28 @@
+{
+    "files.associations": {
+        "*.html": "html",
+        "*.rmd": "markdown",
+        "stdlib.h": "c",
+        "tools.h": "c",
+        "gtk.h": "c",
+        "widgets.h": "c",
+        "system_error": "c",
+        "gdk.h": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c",
+        "assert.h": "c",
+        "piece_modele.h": "c"
+    },
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/**",
+        "/usr/include/gtk-3.0",
+        "/usr/include/glib-2.0",
+        "/usr/lib/x86_64-linux-gnu/glib-2.0/include",
+        "/usr/include/pango-1.0",
+        "/usr/include/harfbuzz",
+        "/usr/include/cairo",
+        "/usr/include/gdk-pixbuf-2.0",
+        "/usr/include/atk-1.0"
+    ]
+}
