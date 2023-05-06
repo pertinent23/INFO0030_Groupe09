@@ -23,8 +23,8 @@ void set_position_y(struct PieceModel_t *piece, unsigned int y);
 
 int collision(struct PieceModel_t *piece, unsigned int *wall, unsigned int wall_length);
 
-void rotate_left(struct PieceModel_t *piece);
-void rotate_right(struct PieceModel_t *piece);
+struct PieceModel_t *rotate_left(struct PieceModel_t *piece);
+struct PieceModel_t *rotate_right(struct PieceModel_t *piece);
 
 
 

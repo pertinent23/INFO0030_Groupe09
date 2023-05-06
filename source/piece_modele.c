@@ -15,9 +15,9 @@ struct PieceModel_t{
 
 static void initialize_piece(struct PieceModel_t *piece, TypePiece type)
 {
-    for(int i = 0; i < SHEMA_EDGES; i++)
+    for(unsigned int i = 0; i < SHEMA_EDGES; i++)
     {
-        for(int j = 0; j < SHEMA_EDGES; j++)
+        for(unsigned int j = 0; j < SHEMA_EDGES; j++)
             piece->shema[i][j] = 0;
     }
 
@@ -73,7 +73,7 @@ struct PieceModel_t *create_piece(TypePiece type)
 
 void destroy_piece(struct PieceModel_t *piece)
 {
-    aseert(piece != NULL);
+    assert(piece != NULL);
 
     free(piece);
 }
@@ -108,38 +108,52 @@ void set_position_y(struct PieceModel_t *piece, unsigned int y)
 
 int collision(struct PieceModel_t *piece, unsigned int *wall, unsigned int wall_length)
 {
-    for(int i = piece->x, j = 0; i<wall_length && j < SHEMA_EDGES; i++ && j++)
+    for(unsigned int i = piece->x, j = 0; i<wall_length && j < SHEMA_EDGES; i++, j++)
     {
-        if (wall[i] + piece->shema[j] == 2 )
-            return 1;
+        for (unsigned int k = 0; k < SHEMA_EDGES; k++)
+        {
+            if (wall[i] + piece->shema[3][j] == 2 )
+                return 1;
+        }
     }
 
     return 0;
 }
 
-void rotate_left(struct PieceModel_t *piece)
+struct PieceModel_t *rotate_left(struct PieceModel_t *piece)
 {
-    unsigned int tmp;
+    struct PieceModel_t *result = create_piece(piece->type);
+
+    if (result == NULL)
+        return NULL;
 
     for(int i = 0; i < SHEMA_EDGES; i++)
     {
         for(int j = 0; j < SHEMA_EDGES; j++)
-        {
-            switch (piece->angle)
-            {
-                case 0:
-                    tmp = piece->shema[i][j];
-                    piece->shema[i][j] = piece->shema[j][i];
-                    piece->shema[j][i] = tmp;
-                    break;
-                
-                case 90:
-                    tmp = piece->shema[i][j];
-                    break;
-
-                default:
-                    break;
-            }
-        }
+            result->shema[j][-i+SHEMA_EDGES-1] = piece->shema[i][j];
     }
+
+    result->angle += ROTATION_LEVEL;
+    result->angle %= 360;
+
+    return result;
+}
+
+struct PieceModel_t *rotate_right(struct PieceModel_t *piece)
+{
+    struct PieceModel_t *result = create_piece(piece->type);
+
+    if (result == NULL)
+        return NULL;
+
+    for(int i = 0; i < SHEMA_EDGES; i++)
+    {
+        for(int j = 0; j < SHEMA_EDGES; j++)
+            result->shema[-j+SHEMA_EDGES-1][i] = piece->shema[i][j];
+    }
+
+    result->angle -= ROTATION_LEVEL;
+    result->angle %= 360;
+
+    return result;
 }

@@ -12,7 +12,10 @@
         "string": "c",
         "string_view": "c",
         "assert.h": "c",
-        "piece_modele.h": "c"
+        "piece_modele.h": "c",
+        "app_vue.h": "c",
+        "app_controleur.h": "c",
+        "app_modele.h": "c"
     },
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/**",

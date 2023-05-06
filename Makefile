@@ -1,48 +1,29 @@
 ### 
 ## Makefile skeleton
-## INFO0030: Projet 3
+## INFO0030: Projet 4
 ## 
 ### 
 
 ## Variables
 
-# Tools & flags
-CC=gcc
-CFLAGS=--std=c99 --pedantic -Wall -W -Wmissing-prototypes
-LD=gcc
-LDFLAGS=
 AT=tar
 ATFLAGS=-zcvf
 DT=doxygen
 
 # Files
-EXEC=calculatrice
-MODULES=tools.c widgets.c main.c
-OBJECTS=tools.o widgets.o main.o
-OUTPUT=calculatrice.tar.gz
-CONFIG=doxygen.config
+OUTPUT=tetris_09.tar.gz
 
-#GTK+
-GTK_FLAGS=pkg-config --cflags
-GTK_LIBS=pkg-config --libs
-GTK=gtk+-2.0
+tetris:
+	cd source && make
 
-app: build
-
-build: $(OBJECTS)
-	$(LD) `$(GTK_FLAGS) $(GTK)` $^ -o $(EXEC) `$(GTK_LIBS) $(GTK)`
-
-$(OBJECTS): %.o: %.c
-	$(CC) `$(GTK_FLAGS) $(GTK)` -o $@ -c $^ $(CFLAGS) `$(GTK_LIBS) $(GTK)`
-
-clean: 
-	rm -f *.o $(EXEC) $(OUTPUT) tempCodeRunnerFile *~
+clean:
+	cd source && make clean
 	clear
 
-archive: clean
+archive:
 	$(AT) $(ATFLAGS) $(OUTPUT) *
 
-doc: app clean
+doc: tetris
 	$(DT) $(CONFIG)
 
 check_memory:
