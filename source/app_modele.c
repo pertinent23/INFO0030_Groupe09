@@ -4,13 +4,12 @@
 #include <stdlib.h>
 #include <assert.h>
 
-#define GRILL_WIDTH 12
-#define GRILL_HEIGHT 24
-
 struct AppModele_t{
+    PieceModel *current;
     unsigned int **grill;
     unsigned int width, height;
-    PieceModel *current;
+    unsigned int score;
+    unsigned int delay;
 };
 
 struct AppModele_t *create_app(void)
@@ -87,4 +86,24 @@ unsigned int get_grill_height(struct AppModele_t *app)
     assert(app != NULL);
 
     return app->height;
+}
+
+void set_score(struct AppModele_t *app, unsigned int score)
+{
+    app->score = score;
+}
+
+void set_deplay(struct AppModele_t *app, unsigned int delay)
+{
+    app->delay = delay;
+}
+
+unsigned int get_score(struct AppModele_t *app)
+{
+    return app->score;
+}
+
+unsigned int get_delay(struct AppModele_t *app)
+{
+    return app->delay;
 }

@@ -15,7 +15,10 @@
         "piece_modele.h": "c",
         "app_vue.h": "c",
         "app_controleur.h": "c",
-        "app_modele.h": "c"
+        "app_modele.h": "c",
+        "typeinfo": "c",
+        "stdio.h": "c",
+        "gdkkeysyms.h": "c"
     },
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/**",
@@ -27,5 +30,6 @@
         "/usr/include/cairo",
         "/usr/include/gdk-pixbuf-2.0",
         "/usr/include/atk-1.0"
-    ]
+    ],
+    "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools"
 }

@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <gdk/gdkkeysyms.h>
 
 struct AppControleur_t{
     AppVue *vue;
@@ -22,12 +23,41 @@ static void destroy_window(GtkWidget *window, gpointer data)
     UNUSED(data);
 }
 
+static void on_key_pressed(GtkWidget *window, GdkEventKey *event, gpointer data)
+{
+    switch (event->keyval)
+    {
+        case GDK_KEY_Up:
+            break;
+        
+        case GDK_KEY_Down:
+            break;
+        
+        case GDK_KEY_Right:
+            break;
+        
+        case GDK_KEY_Left:
+            break;
+
+        default:
+            break;
+    }
+
+    UNUSED(window);
+    UNUSED(data);
+}
+
 static void connect_app_event(struct AppControleur_t *app)
 {
     g_signal_connect(
         G_OBJECT(get_window(app->vue)), "destroy",
         G_CALLBACK(destroy_window), NULL
     );   
+
+    g_signal_connect(
+        G_OBJECT(get_window(app->vue)), "key-press-event", 
+        G_CALLBACK(on_key_pressed), NULL
+    );
 }
 
 static void load_app_data(struct AppControleur_t *app)
