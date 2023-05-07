@@ -111,3 +111,11 @@ void destroy_piece_vue(struct PieceVue_t *vue)
     destroy_piece(vue->modele);
     free(vue);
 }
+
+void modify_piece_model(struct PieceVue_t *vue, PieceModel *modele)
+{
+    assert(vue != NULL && modele != NULL);
+    if(vue->modele != NULL)
+        destroy_piece(vue->modele);
+    vue->modele = modele;
+}

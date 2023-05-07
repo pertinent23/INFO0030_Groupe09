@@ -4,6 +4,7 @@
 #include <gtk/gtk.h>
 
 #define SHEMA_EDGES 4
+#define GRAVITY_RATE 0.1
 #define ROTATION_LEVEL 90
 
 typedef struct PieceModel_t PieceModel;
@@ -18,11 +19,13 @@ void destroy_piece(struct PieceModel_t *piece);
 
 unsigned int get_position_x(struct PieceModel_t *piece);
 unsigned int get_position_y(struct PieceModel_t *piece);
+double get_gravity(struct PieceModel_t *piece);
 
 unsigned int get_shema_item(struct PieceModel_t *piece, unsigned int x, unsigned int y);
 
 void set_position_x(struct PieceModel_t *piece, unsigned int x);
 void set_position_y(struct PieceModel_t *piece, unsigned int y);
+void update_gravity(struct PieceModel_t *piece);
 
 int collision(struct PieceModel_t *piece, unsigned int *wall, unsigned int wall_length);
 

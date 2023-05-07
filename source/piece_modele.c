@@ -3,11 +3,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <math.h>
 
 struct PieceModel_t{
     TypePiece type;
     unsigned int shema[SHEMA_EDGES][SHEMA_EDGES];
     unsigned int x, y;
+    double gravity;
     int angle;
 };
 
@@ -63,6 +65,7 @@ struct PieceModel_t *create_piece(TypePiece type)
     
     result->type = type;
     result->angle = 0;
+    result->gravity = 0.0;
 
     initialize_piece(result, type);
 
@@ -87,7 +90,12 @@ unsigned int get_position_y(struct PieceModel_t *piece)
 {
     assert(piece != NULL);
 
-    return piece->y;
+    return piece->y + (unsigned int) floor(piece->gravity);
+}
+
+double get_gravity(struct PieceModel_t *piece)
+{
+    return piece->gravity - floor(piece->gravity);
 }
 
 void set_position_x(struct PieceModel_t *piece, unsigned int x)
@@ -102,6 +110,11 @@ void set_position_y(struct PieceModel_t *piece, unsigned int y)
     assert(piece != NULL);
 
     piece->y = y;
+}
+
+void update_gravity(struct PieceModel_t *piece)
+{
+    piece->gravity += GRAVITY_RATE;
 }
 
 int collision(struct PieceModel_t *piece, unsigned int *wall, unsigned int wall_length)
@@ -136,6 +149,9 @@ struct PieceModel_t *rotate_left(struct PieceModel_t *piece)
 
     result->angle += ROTATION_LEVEL;
     result->angle %= 360;
+    result->x = piece->x;
+    result->y = piece->y;
+    result->gravity = piece->gravity;
 
     return result;
 }
@@ -157,6 +173,9 @@ struct PieceModel_t *rotate_right(struct PieceModel_t *piece)
 
     result->angle -= ROTATION_LEVEL;
     result->angle %= 360;
+    result->x = piece->x;
+    result->y = piece->y;
+    result->gravity = piece->gravity;
 
     return result;
 }

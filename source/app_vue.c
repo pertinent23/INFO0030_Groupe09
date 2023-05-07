@@ -72,12 +72,6 @@ void destroy_app_vue(struct AppVue_t *vue)
 {
     assert(vue != NULL);
 
-    if (vue->windowContainer != NULL)
-        gtk_widget_destroy(GTK_WIDGET(vue->windowContainer));
-        
-    if (vue->window != NULL)
-        gtk_widget_destroy(GTK_WIDGET(vue->window));
-
     destroy_app(vue->modele);
 
     free(vue);
@@ -337,6 +331,12 @@ GtkWidget *get_window_container(struct AppVue_t *vue)
 {
     assert(vue != NULL);
     return vue->windowContainer;
+}
+
+GtkWidget *get_grill(struct AppVue_t *vue)
+{
+    assert(vue != NULL);
+    return vue->grill_side;
 }
 
 GtkWidget *get_arrow_up(struct AppVue_t *vue)

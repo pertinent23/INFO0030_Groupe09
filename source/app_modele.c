@@ -56,6 +56,10 @@ void destroy_app(struct AppModele_t *app)
         free(app->grill[i]);
     
     free(app->grill);
+
+    if (app->current != NULL)
+        destroy_piece_controleur(app->current);
+        
     free(app);
 }
 

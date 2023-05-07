@@ -9,6 +9,8 @@ struct PieceVue_t *create_piece_vue(TypePiece type);
 
 PieceModel *get_piece_model(struct PieceVue_t *vue);
 
+void modify_piece_model(struct PieceVue_t *vue, PieceModel *modele);
+
 unsigned int get_color_r(struct PieceVue_t *vue);
 unsigned int get_color_g(struct PieceVue_t *vue);
 unsigned int get_color_b(struct PieceVue_t *vue);

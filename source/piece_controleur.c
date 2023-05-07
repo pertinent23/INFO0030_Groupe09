@@ -1,4 +1,5 @@
 #include "piece_controleur.h"
+#include "tools.h"
 #include <assert.h>
 
 struct PieceControleur_t{
@@ -34,6 +35,42 @@ PieceVue *get_piece_vue(struct PieceControleur_t *controleur)
 {
     assert(controleur != NULL);
     return controleur->vue;
+}
+
+void draw_piece(struct PieceControleur_t *piece, cairo_t *context, unsigned int edges, unsigned int line)
+{
+    PieceModel *piece_m = get_piece_model(piece->vue);
+    unsigned int xp = get_position_x(piece_m);
+    unsigned int yp = get_position_y(piece_m);
+
+    for(int x = 0; x<SHEMA_EDGES; x++)
+    {
+        for(int y = 0; y<SHEMA_EDGES; y++)
+        {
+            if (get_shema_item(piece_m, x, y))
+            {
+                cairo_set_source_rgb(
+                    context, 
+                    (double) get_color_r(piece->vue)/255, 
+                    (double) get_color_g(piece->vue)/255, 
+                    (double) get_color_b(piece->vue)/255
+                );
+
+                cairo_rectangle(
+                    context, 
+                    (x+xp)*edges + (x+1), 
+                    (y+yp)*edges + (y+1) + get_gravity(piece_m), 
+                    edges, edges
+                );
+
+                cairo_fill_preserve(context);
+
+                cairo_set_line_width(context, line);
+                cairo_set_source_rgb(context, FILL_R, FILL_G, FILL_B);
+                cairo_stroke(context);
+            }
+        }
+    }
 }
 
 void destroy_piece_controleur(struct PieceControleur_t *controleur)

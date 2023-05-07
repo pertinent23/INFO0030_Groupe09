@@ -38,6 +38,7 @@ GtkWidget *get_button_new(struct AppVue_t *vue);
 GtkWidget *get_button_quit(struct AppVue_t *vue);
 
 GtkWidget *get_window(struct AppVue_t *vue);
+GtkWidget *get_grill(struct AppVue_t *vue);
 GtkWidget *get_window_container(struct AppVue_t *vue);
 
 void update_score_label(struct AppVue_t *vue);
