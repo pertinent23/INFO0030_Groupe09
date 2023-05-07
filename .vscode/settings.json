@@ -18,7 +18,14 @@
         "app_modele.h": "c",
         "typeinfo": "c",
         "stdio.h": "c",
-        "gdkkeysyms.h": "c"
+        "gdkkeysyms.h": "c",
+        "compare": "c",
+        "functional": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "istream": "c",
+        "ostream": "c"
     },
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/**",

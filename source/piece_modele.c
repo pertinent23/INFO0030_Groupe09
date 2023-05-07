@@ -4,8 +4,6 @@
 #include <stdlib.h>
 #include <assert.h>
 
-#define SHEMA_EDGES 4
-
 struct PieceModel_t{
     TypePiece type;
     unsigned int shema[SHEMA_EDGES][SHEMA_EDGES];
@@ -108,6 +106,7 @@ void set_position_y(struct PieceModel_t *piece, unsigned int y)
 
 int collision(struct PieceModel_t *piece, unsigned int *wall, unsigned int wall_length)
 {
+    assert(piece != NULL && wall != NULL && wall_length > 0);
     for(unsigned int i = piece->x, j = 0; i<wall_length && j < SHEMA_EDGES; i++, j++)
     {
         for (unsigned int k = 0; k < SHEMA_EDGES; k++)
@@ -122,6 +121,8 @@ int collision(struct PieceModel_t *piece, unsigned int *wall, unsigned int wall_
 
 struct PieceModel_t *rotate_left(struct PieceModel_t *piece)
 {
+    assert(piece != NULL);
+
     struct PieceModel_t *result = create_piece(piece->type);
 
     if (result == NULL)
@@ -141,6 +142,8 @@ struct PieceModel_t *rotate_left(struct PieceModel_t *piece)
 
 struct PieceModel_t *rotate_right(struct PieceModel_t *piece)
 {
+    assert(piece != NULL);
+
     struct PieceModel_t *result = create_piece(piece->type);
 
     if (result == NULL)
@@ -156,4 +159,16 @@ struct PieceModel_t *rotate_right(struct PieceModel_t *piece)
     result->angle %= 360;
 
     return result;
+}
+
+TypePiece get_piece_type(struct PieceModel_t *piece)
+{
+    assert(piece != NULL);
+    return piece->type;
+}
+
+unsigned int get_shema_item(struct PieceModel_t *piece, unsigned int x, unsigned int y)
+{
+    assert(piece != NULL && x < SHEMA_EDGES && y < SHEMA_EDGES);
+    return piece->shema[x][y];
 }

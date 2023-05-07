@@ -1,11 +1,10 @@
 #include "app_modele.h"
-#include "piece_modele.h"
 
 #include <stdlib.h>
 #include <assert.h>
 
 struct AppModele_t{
-    PieceModel *current;
+    PieceControleur *current;
     unsigned int **grill;
     unsigned int width, height;
     unsigned int score;
@@ -60,14 +59,14 @@ void destroy_app(struct AppModele_t *app)
     free(app);
 }
 
-PieceModel *get_current_pieces(struct AppModele_t *app)
+PieceControleur *get_current_pieces(struct AppModele_t *app)
 {
     assert(app !=  NULL);
 
     return app->current;
 }
 
-void set_current_pieces(struct AppModele_t *app, PieceModel *data)
+void set_current_pieces(struct AppModele_t *app, PieceControleur *data)
 {
     assert(app != NULL);
 
@@ -90,20 +89,24 @@ unsigned int get_grill_height(struct AppModele_t *app)
 
 void set_score(struct AppModele_t *app, unsigned int score)
 {
+    assert(app != NULL);
     app->score = score;
 }
 
 void set_deplay(struct AppModele_t *app, unsigned int delay)
 {
+    assert(app != NULL);
     app->delay = delay;
 }
 
 unsigned int get_score(struct AppModele_t *app)
 {
+    assert(app != NULL);
     return app->score;
 }
 
 unsigned int get_delay(struct AppModele_t *app)
 {
+    assert(app != NULL);
     return app->delay;
 }

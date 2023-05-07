@@ -64,6 +64,7 @@ struct AppVue_t *create_app_vue(void)
 
 AppModele *get_modele(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
     return vue->modele;
 }
 
@@ -84,6 +85,8 @@ void destroy_app_vue(struct AppVue_t *vue)
 
 void create_window(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
+
     GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     GdkGeometry geometry;
 
@@ -103,6 +106,8 @@ void create_window(struct AppVue_t *vue)
 
 void create_window_container(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
+
     vue->windowContainer = gtk_table_new(11, 12, TRUE);
 
     create_menu(vue);
@@ -118,6 +123,8 @@ void create_window_container(struct AppVue_t *vue)
 
 void create_menu(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
+
     vue->menu_bar = gtk_menu_bar_new();
     vue->menu = gtk_menu_new();
 
@@ -140,6 +147,8 @@ void create_menu(struct AppVue_t *vue)
 
 void create_footer(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
+
     vue->footer = gtk_table_new(5, 3, TRUE);
 
 
@@ -191,13 +200,15 @@ void create_footer(struct AppVue_t *vue)
         GTK_EXPAND, GTK_EXPAND, 0, 0
     );
 
-    set_font_color(label[1], "#B091F2");
+    set_font_color(label[0], "#B091F2");
     set_font_color(label[1], "#B091F2");
     set_font_color(label[2], "#B091F2");
 }
 
 void create_grill_side(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
+
     vue->grill_side = gtk_drawing_area_new();
 
     set_color(vue->grill_side, "#1E1F29");
@@ -210,6 +221,8 @@ void create_grill_side(struct AppVue_t *vue)
 
 void create_options(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
+
     vue->options = gtk_table_new(6, 1, TRUE);
 
     gtk_table_attach(
@@ -225,6 +238,8 @@ void create_options(struct AppVue_t *vue)
 
 GtkWidget *create_buttons(struct AppVue_t *vue) 
 {
+    assert(vue != NULL);
+
     GtkWidget *container = gtk_table_new(3, 1, TRUE);
 
     set_color(container, "#1E1F29");
@@ -247,6 +262,8 @@ GtkWidget *create_buttons(struct AppVue_t *vue)
 
 GtkWidget *create_labels(struct AppVue_t *vue) 
 {
+    assert(vue != NULL);
+
     GtkWidget *container = gtk_table_new(3, 1, TRUE);
 
     vue->labels.score = gtk_label_new("Score: 0");
@@ -267,6 +284,8 @@ GtkWidget *create_labels(struct AppVue_t *vue)
 
 GtkWidget *create_arrow(struct AppVue_t *vue, GtkArrowType type)
 {
+    assert(vue != NULL);
+
     GtkWidget *arrow = gtk_arrow_new(type, GTK_SHADOW_OUT);
     GtkWidget *button = gtk_button_new();
 
@@ -300,6 +319,8 @@ GtkWidget *create_arrow(struct AppVue_t *vue, GtkArrowType type)
 
 void build_app_vue(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
+
     create_window(vue);
     create_window_container(vue);
 
@@ -308,74 +329,90 @@ void build_app_vue(struct AppVue_t *vue)
 
 GtkWidget *get_window(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
     return vue->window;
 }
 
 GtkWidget *get_window_container(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
     return vue->windowContainer;
 }
 
 GtkWidget *get_arrow_up(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
     return vue->arrows.arrow_up;
 }
 
 GtkWidget *get_arrow_down(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
     return vue->arrows.arrow_down;
 }
 
 GtkWidget *get_arrow_left(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
     return vue->arrows.arrow_left;
 }
 
 GtkWidget *get_arrow_right(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
     return vue->arrows.arrow_right;
 }
 
 GtkWidget *get_menu_new(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
     return vue->menu_items.new;
 }
 
 GtkWidget *get_menu_quit(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
     return vue->menu_items.quit;
 }
 
 GtkWidget *get_menu_best(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
     return vue->menu_items.best;
 }
 
 GtkWidget *get_menu_help(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
     return vue->menu_items.help;
 }
 
 GtkWidget *get_button_new(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
     return vue->buttons.new;
 }
 
 GtkWidget *get_button_quit(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
     return vue->buttons.end;
 }
 
-void update_score_label(struct AppVue_t vue)
+void update_score_label(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
+    
     char data[25];
-    sprintf(data, "Score: %u", get_score(vue.modele));
-    gtk_label_set_label(GTK_LABEL(vue.labels.score), data);
+    sprintf(data, "Score: %u", get_score(vue->modele));
+    gtk_label_set_label(GTK_LABEL(vue->labels.score), data);
 }
 
-void update_delay_label(struct AppVue_t vue)
+void update_delay_label(struct AppVue_t *vue)
 {
+    assert(vue != NULL);
+
     char data[25];
-    sprintf(data, "Delay: %u", get_score(vue.modele));
-    gtk_label_set_label(GTK_LABEL(vue.labels.delay), data);
+    sprintf(data, "Delay: %u", get_score(vue->modele));
+    gtk_label_set_label(GTK_LABEL(vue->labels.delay), data);
 }

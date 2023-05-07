@@ -40,8 +40,8 @@ GtkWidget *get_button_quit(struct AppVue_t *vue);
 GtkWidget *get_window(struct AppVue_t *vue);
 GtkWidget *get_window_container(struct AppVue_t *vue);
 
-void update_score_label(struct AppVue_t vue);
-void update_delay_label(struct AppVue_t vue);
+void update_score_label(struct AppVue_t *vue);
+void update_delay_label(struct AppVue_t *vue);
 void build_app_vue(struct AppVue_t *vue);
 
 #endif // !__APP_VUE__

@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 #include <gdk/gdkkeysyms.h>
 
 struct AppControleur_t{
@@ -49,20 +50,28 @@ static void on_key_pressed(GtkWidget *window, GdkEventKey *event, gpointer data)
 
 static void connect_app_event(struct AppControleur_t *app)
 {
+    assert(app != NULL);
+
     g_signal_connect(
-        G_OBJECT(get_window(app->vue)), "destroy",
+        G_OBJECT(app->window), "destroy",
         G_CALLBACK(destroy_window), NULL
     );   
 
     g_signal_connect(
-        G_OBJECT(get_window(app->vue)), "key-press-event", 
+        G_OBJECT(app->window), "key-press-event", 
         G_CALLBACK(on_key_pressed), NULL
     );
 }
 
 static void load_app_data(struct AppControleur_t *app)
 {
+    assert(app != NULL);
+
     app->window = get_window(app->vue);
+    app->arrow_down = get_arrow_down(app->vue);
+    app->arrow_left = get_arrow_left(app->vue);
+    app->arrow_right = get_arrow_right(app->vue);
+    app->arrow_up = get_arrow_up(app->vue);
 }
 
 struct AppControleur_t *create_app_controleur(void)
@@ -85,6 +94,8 @@ struct AppControleur_t *create_app_controleur(void)
 
 void launch(struct AppControleur_t *app)
 {
+    assert(app != NULL);
+
     build_app_vue(app->vue);
     
     load_app_data(app);
@@ -96,6 +107,8 @@ void launch(struct AppControleur_t *app)
 
 void destroy_app_controleur(struct AppControleur_t *app)
 {
+    assert(app != NULL);
+    
     destroy_app_vue(app->vue);
     free(app);
 }

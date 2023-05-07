@@ -3,6 +3,7 @@
 
 #include <gtk/gtk.h>
 
+#define SHEMA_EDGES 4
 #define ROTATION_LEVEL 90
 
 typedef struct PieceModel_t PieceModel;
@@ -18,6 +19,8 @@ void destroy_piece(struct PieceModel_t *piece);
 unsigned int get_position_x(struct PieceModel_t *piece);
 unsigned int get_position_y(struct PieceModel_t *piece);
 
+unsigned int get_shema_item(struct PieceModel_t *piece, unsigned int x, unsigned int y);
+
 void set_position_x(struct PieceModel_t *piece, unsigned int x);
 void set_position_y(struct PieceModel_t *piece, unsigned int y);
 
@@ -25,6 +28,8 @@ int collision(struct PieceModel_t *piece, unsigned int *wall, unsigned int wall_
 
 struct PieceModel_t *rotate_left(struct PieceModel_t *piece);
 struct PieceModel_t *rotate_right(struct PieceModel_t *piece);
+
+TypePiece get_piece_type(struct PieceModel_t *piece);
 
 
 
