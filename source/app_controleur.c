@@ -245,6 +245,44 @@ static int is_line_filled(void **line, unsigned int length)
     return 1;
 }
 
+static void new_game(struct AppControleur_t *app)
+{
+    AppModele *modele = get_modele(app->vue);
+    PieceControleur *current = get_current_pieces(modele);
+
+    if (current != NULL)
+    {
+        destroy_piece_controleur(current);
+        set_current_pieces(modele, NULL);
+    }
+
+    unsigned int width = get_grill_width(modele);
+    unsigned int height = get_grill_height(modele);
+
+    for (unsigned int y = 0; y < height; y++)
+    {
+        for (unsigned int x = 0; x < width; x++)
+        {
+            set_pixel(modele, NULL, x, y);
+        }
+    }
+
+    app->play = 1;
+    app->pause = 0;
+
+    set_score(modele, 0);
+    set_deplay(modele, 0);
+}
+
+static void on_new_game_pressed(GtkWidget *widget, gpointer data)
+{
+    struct AppControleur_t *app = (struct AppControleur_t *) data;
+
+    new_game(app);
+
+    UNUSED(widget);
+}
+
 static void summerize(struct AppControleur_t *app)
 {
     AppModele *modele = get_modele(app->vue);
@@ -331,6 +369,16 @@ static void connect_app_event(struct AppControleur_t *app)
     g_signal_connect(
         G_OBJECT(app->window), "destroy",
         G_CALLBACK(destroy_window), NULL
+    );
+
+    g_signal_connect(
+        G_OBJECT(get_menu_quit(app->vue)), "activate",
+        G_CALLBACK(destroy_window), NULL
+    );
+
+    g_signal_connect(
+        G_OBJECT(get_button_quit(app->vue)), "clicked",
+        G_CALLBACK(destroy_window), NULL
     );   
 
     g_signal_connect(
@@ -366,6 +414,16 @@ static void connect_app_event(struct AppControleur_t *app)
     g_signal_connect(
         G_OBJECT(app->arrow_left), "clicked", 
         G_CALLBACK(on_button_arrow_left_pressed), (gpointer) app
+    );
+
+    g_signal_connect(
+        G_OBJECT(get_menu_new(app->vue)), "activate",
+        G_CALLBACK(on_new_game_pressed), app
+    );
+
+    g_signal_connect(
+        G_OBJECT(get_button_new(app->vue)), "clicked",
+        G_CALLBACK(on_new_game_pressed), app
     );
 }
 
@@ -454,12 +512,19 @@ static void frame_rate(struct AppControleur_t *app)
                 )
             );
         }
-        else
+        else 
         {
-            fill_grill(app, current);
-            destroy_piece_controleur(current);
-            current = generate_piece();
-            set_current_pieces(get_modele(app->vue), current);
+            if (get_position_y(get_piece_model(get_piece_vue(current))) == 0)
+            {
+                app->pause = 1;
+            }
+            else
+            {
+                fill_grill(app, current);
+                destroy_piece_controleur(current);
+                current = generate_piece();
+                set_current_pieces(get_modele(app->vue), current);
+            }
         }
     }
 

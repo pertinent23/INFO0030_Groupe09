@@ -3,7 +3,7 @@
 
 #include <gtk/gtk.h>
 
-#define CLOCK 20
+#define CLOCK 40
 
 typedef struct AppControleur_t AppControleur;
 
