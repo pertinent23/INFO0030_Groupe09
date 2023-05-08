@@ -25,7 +25,8 @@
         "type_traits": "c",
         "utility": "c",
         "istream": "c",
-        "ostream": "c"
+        "ostream": "c",
+        "piece_controleur.h": "c"
     },
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/**",

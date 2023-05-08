@@ -27,7 +27,9 @@ void set_position_x(struct PieceModel_t *piece, unsigned int x);
 void set_position_y(struct PieceModel_t *piece, unsigned int y);
 void update_gravity(struct PieceModel_t *piece);
 
-int collision(struct PieceModel_t *piece, unsigned int *wall, unsigned int wall_length);
+int collision_right(struct PieceModel_t *piece, void ***wall, unsigned int wall_length, unsigned int h);
+int collision_left(struct PieceModel_t *piece, void ***wall, unsigned int wall_length, unsigned int h);
+int collision_down(struct PieceModel_t *piece, void ***wall, unsigned int wall_length, unsigned int h);
 
 struct PieceModel_t *rotate_left(struct PieceModel_t *piece);
 struct PieceModel_t *rotate_right(struct PieceModel_t *piece);

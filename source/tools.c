@@ -1,5 +1,14 @@
 #include "tools.h"
 
+Color CIAN = {.r= 0, .g=255, .b=255};
+Color YELLOW = {.r= 242, .g=226, .b=5};
+Color PURPLE = {.r= 147, .g=5, .b=242};
+Color ORANGE = {.r= 255, .g=165, .b=0};
+Color BLUE = {.r= 0, .g=0, .b=255};
+Color RED = {.r= 242, .g=5, .b=5};
+Color GREEN = {.r= 13, .g=242, .b=5};
+Color DARK = {.r= 30, .g=31, .b=41};
+
 GtkWidget *create_label(const char *name, unsigned int size)
 {
     GtkWidget *label = gtk_label_new(name);

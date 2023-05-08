@@ -5,7 +5,7 @@
 
 struct AppModele_t{
     PieceControleur *current;
-    unsigned int **grill;
+    Color ***grill;
     unsigned int width, height;
     unsigned int score;
     unsigned int delay;
@@ -21,7 +21,7 @@ struct AppModele_t *create_app(void)
     result->width = GRILL_WIDTH;
     result->height = GRILL_HEIGHT;
 
-    result->grill = malloc(sizeof(unsigned int *) * result->width);
+    result->grill = malloc(sizeof(Color **) * (result->height+1));
 
     if (result->grill == NULL)
     {
@@ -29,9 +29,9 @@ struct AppModele_t *create_app(void)
         return NULL;
     }
 
-    for(int k = 0; k < (int) result->width; k++)
+    for(int k = 0; k < (int) (result->height+1); k++)
     {
-        result->grill[k] = malloc(sizeof(unsigned int) * result->height);
+        result->grill[k] = malloc(sizeof(Color *) * (result->width+1));
 
         if (result->grill[k] ==  NULL)
         {
@@ -43,6 +43,22 @@ struct AppModele_t *create_app(void)
         }
     }
 
+    for (unsigned int x = 0; x < result->width+1; x++)
+    {
+        for (unsigned int y = 0; y < result->height+1; y++)
+        {
+            if (x==result->width || y==result->height)
+            {
+                result->grill[y][x] = &DARK;
+            }
+            else
+            {
+                result->grill[y][x] = NULL;
+            }
+        }
+    }
+    
+
     result->current = NULL;
 
     return result;
@@ -52,7 +68,7 @@ void destroy_app(struct AppModele_t *app)
 {
     assert(app != NULL);
 
-    for (unsigned int i = 0; i < app->width; i++)
+    for (unsigned int i = 0; i < app->height+1; i++)
         free(app->grill[i]);
     
     free(app->grill);
@@ -113,4 +129,23 @@ unsigned int get_delay(struct AppModele_t *app)
 {
     assert(app != NULL);
     return app->delay;
+}
+
+Color *get_pixel(struct AppModele_t *app, unsigned int x, unsigned int y)
+{
+    assert(app != NULL);
+    return app->grill[y][x];
+}
+
+Color ***get_pixels(struct AppModele_t *app)
+{
+    assert(app != NULL);
+    return app->grill;
+}
+
+
+void set_pixel(struct AppModele_t *app, Color *color, unsigned int x, unsigned y)
+{
+    assert(app != NULL);
+    app->grill[y][x] = color;
 }

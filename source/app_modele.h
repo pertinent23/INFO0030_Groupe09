@@ -2,6 +2,7 @@
 #define __APP_MODELE__
 
 #include "piece_controleur.h"
+#include "tools.h"
 
 #define WINDOW_WIDTH 550
 #define WINDOW_HEIGHT 600
@@ -18,8 +19,11 @@ struct AppModele_t *create_app(void);
 PieceControleur *get_current_pieces(struct AppModele_t *app);
 
 void destroy_app(struct AppModele_t *app);
-
 void set_current_pieces(struct AppModele_t *app, PieceControleur *data);
+void set_pixel(struct AppModele_t *app, Color *color, unsigned int x, unsigned y);
+
+Color *get_pixel(struct AppModele_t *app, unsigned int x, unsigned int y);
+Color ***get_pixels(struct AppModele_t *app);
 
 unsigned int get_grill_width(struct AppModele_t *app);
 unsigned int get_grill_height(struct AppModele_t *app);

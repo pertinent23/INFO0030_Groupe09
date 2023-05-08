@@ -37,11 +37,29 @@ PieceVue *get_piece_vue(struct PieceControleur_t *controleur)
     return controleur->vue;
 }
 
+void draw_case(cairo_t *context, Color *color, double x, double y, double gravity, unsigned int edges, unsigned int line)
+{
+    cairo_set_source_rgb(
+        context, 
+        (double) color->r/255, 
+        (double) color->g/255, 
+        (double) color->b/255
+    );
+
+    cairo_rectangle(context, x*edges+(x+1)*line, y*edges+(y+1)*line+gravity, edges, edges);
+    cairo_fill_preserve(context);
+    cairo_set_line_width(context, line);
+    cairo_set_source_rgb(context, DARK.r/255, DARK.g/255, DARK.b/255);
+    cairo_stroke(context);
+}
+
 void draw_piece(struct PieceControleur_t *piece, cairo_t *context, unsigned int edges, unsigned int line)
 {
     PieceModel *piece_m = get_piece_model(piece->vue);
+    Color *color = get_color(piece->vue);
     unsigned int xp = get_position_x(piece_m);
     unsigned int yp = get_position_y(piece_m);
+    double gravity = get_gravity(piece_m);
 
     for(int x = 0; x<SHEMA_EDGES; x++)
     {
@@ -49,25 +67,7 @@ void draw_piece(struct PieceControleur_t *piece, cairo_t *context, unsigned int 
         {
             if (get_shema_item(piece_m, x, y))
             {
-                cairo_set_source_rgb(
-                    context, 
-                    (double) get_color_r(piece->vue)/255, 
-                    (double) get_color_g(piece->vue)/255, 
-                    (double) get_color_b(piece->vue)/255
-                );
-
-                cairo_rectangle(
-                    context, 
-                    (x+xp)*edges + (x+1), 
-                    (y+yp)*edges + (y+1) + get_gravity(piece_m), 
-                    edges, edges
-                );
-
-                cairo_fill_preserve(context);
-
-                cairo_set_line_width(context, line);
-                cairo_set_source_rgb(context, FILL_R, FILL_G, FILL_B);
-                cairo_stroke(context);
+                draw_case(context, color, x+xp, y+yp, gravity, edges, line);   
             }
         }
     }

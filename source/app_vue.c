@@ -208,8 +208,8 @@ void create_grill_side(struct AppVue_t *vue)
     set_color(vue->grill_side, "#1E1F29");
     gtk_widget_set_size_request(
         vue->grill_side, 
-        GRILL_CELL_SIZE * GRILL_WIDTH, 
-        GRILL_CELL_SIZE * GRILL_HEIGHT
+        GRILL_CELL_SIZE * GRILL_WIDTH + (GRILL_WIDTH + 1)*GRILL_CELL_MARGING, 
+        GRILL_CELL_SIZE * GRILL_HEIGHT + (GRILL_HEIGHT + 1)*GRILL_CELL_MARGING
     );
 }
 

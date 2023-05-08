@@ -26,7 +26,13 @@ struct AppControleur_t{
 
 static void clear_grill(cairo_t *cairo)
 {
-    cairo_set_source_rgb(cairo, FILL_R, FILL_G, FILL_B);
+    cairo_set_source_rgb(
+        cairo, 
+        (double) DARK.r/255, 
+        (double) DARK.g/255, 
+        (double) DARK.b/255
+    );
+
     cairo_paint(cairo);
 }
 
@@ -67,6 +73,65 @@ static void on_button_arrow_up_pressed(GtkWidget * widget, gpointer data)
     UNUSED(widget);
 }
 
+static void arrow_right_pressed(gpointer data)
+{
+    struct AppControleur_t *app = (struct AppControleur_t *) data;
+    PieceControleur *piece = get_current_pieces(get_modele(app->vue));
+    PieceModel *piece_m = get_piece_model(get_piece_vue(piece));
+
+    void ***wall;
+    unsigned int x = get_position_x(piece_m), collision = 0, z = 1;
+
+    while (z<=4 && x+z <= GRILL_WIDTH && collision==0)
+    {
+        wall = (void ***) get_pixels(get_modele(app->vue));
+        collision = collision_right(piece_m, wall, GRILL_WIDTH, x+z);
+        z++;
+    }
+
+    if (!collision)
+    {
+        set_position_x(piece_m, get_position_x(piece_m)+1);
+    }
+}
+
+static void on_button_arrow_right_pressed(GtkWidget * widget, gpointer data)
+{
+    arrow_right_pressed(data);
+    UNUSED(widget);
+}
+
+static void arrow_left_pressed(gpointer data)
+{
+    struct AppControleur_t *app = (struct AppControleur_t *) data;
+    PieceControleur *piece = get_current_pieces(get_modele(app->vue));
+    PieceModel *piece_m = get_piece_model(get_piece_vue(piece));
+
+    if (get_position_x(piece_m))
+    {
+         void ***wall;
+        unsigned int x = get_position_x(piece_m), collision = 0, z = 1;
+
+        while (z<=4 && x+z <= GRILL_WIDTH && collision==0)
+        {
+            wall = (void ***) get_pixels(get_modele(app->vue));
+            collision = collision_right(piece_m, wall, GRILL_WIDTH, x+z);
+            z++;
+        }
+
+        if(!collision)
+        {
+            set_position_x(piece_m, get_position_x(piece_m)-1);
+        }
+    }
+}
+
+static void on_button_arrow_left_pressed(GtkWidget * widget, gpointer data)
+{
+    arrow_left_pressed(data);
+    UNUSED(widget);
+}
+
 static void on_key_pressed(GtkWidget *window, GdkEventKey *event, gpointer data)
 {
     switch (event->keyval)
@@ -80,9 +145,11 @@ static void on_key_pressed(GtkWidget *window, GdkEventKey *event, gpointer data)
             break;
         
         case GDK_KEY_Right:
+            arrow_right_pressed(data);
             break;
         
         case GDK_KEY_Left:
+            arrow_left_pressed(data);
             break;
 
         default:
@@ -107,16 +174,15 @@ static gboolean on_expose(GtkWidget *widget, GdkEventExpose *event, gpointer dat
     struct AppControleur_t *app = (struct AppControleur_t *) data;
     GdkWindow *window = gtk_widget_get_window(widget);
     cairo_t *context = gdk_cairo_create(window);
-    PieceControleur *piece = get_current_pieces(
-        get_modele(app->vue)
-    );
+    PieceControleur *piece = get_current_pieces(get_modele(app->vue));
 
     if (piece != NULL)
     {
         clear_grill(context);
         draw_piece(
             piece, context, 
-            GRILL_CELL_SIZE, GRILL_CELL_MARGING
+            GRILL_CELL_SIZE, 
+            GRILL_CELL_MARGING
         );
     }
 
@@ -160,6 +226,16 @@ static void connect_app_event(struct AppControleur_t *app)
         G_OBJECT(app->arrow_up), "clicked", 
         G_CALLBACK(on_button_arrow_up_pressed), (gpointer) app
     );
+
+    g_signal_connect(
+        G_OBJECT(app->arrow_right), "clicked", 
+        G_CALLBACK(on_button_arrow_right_pressed), (gpointer) app
+    );
+
+    g_signal_connect(
+        G_OBJECT(app->arrow_left), "clicked", 
+        G_CALLBACK(on_button_arrow_left_pressed), (gpointer) app
+    );
 }
 
 static void load_app_data(struct AppControleur_t *app)
@@ -182,7 +258,7 @@ static void frame_rate(struct AppControleur_t *app)
 
     if (current == NULL)
     {
-        current = create_piece_controleur(L_NORMAL);
+        current = create_piece_controleur(TE);
         set_current_pieces(get_modele(app->vue), current);
         set_position_x(get_piece_model(get_piece_vue(current)), 0);
         set_position_y(get_piece_model(get_piece_vue(current)), 0);
@@ -191,11 +267,27 @@ static void frame_rate(struct AppControleur_t *app)
     if (app->can_draw)
     {
         gtk_widget_queue_draw(app->grill);
-        update_gravity(
-            get_piece_model(
-                get_piece_vue(current)
-            )
-        );
+
+        void ***wall;
+        PieceModel *piece_m = get_piece_model(get_piece_vue(current));
+        unsigned int y = get_position_y(piece_m), collision = 0, z = 1;
+
+        while (z<=4 && y+z <= GRILL_HEIGHT && collision==0)
+        {
+            wall = (void ***) get_pixels(get_modele(app->vue));
+            collision = collision_down(piece_m, wall, GRILL_WIDTH, y+z);
+            z++;
+        }
+        
+
+        if (!collision)
+        {
+            update_gravity(
+                get_piece_model(
+                    get_piece_vue(current)
+                )
+            );
+        }
     }
 }
 
