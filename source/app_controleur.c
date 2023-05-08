@@ -5,6 +5,7 @@
 #include "app_modele.h"
 #include "piece_modele.h"
 #include "piece_controleur.h"
+#include "modal_controleur.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,9 +14,11 @@
 
 struct AppControleur_t{
     AppVue *vue;
+    ModalControleur *activeModal;
     unsigned int can_draw;
     unsigned int play;
     unsigned int pause;
+    unsigned int finish;
     GtkWidget *window;
     GtkWidget *grill;
     GtkWidget *arrow_up;
@@ -269,6 +272,7 @@ static void new_game(struct AppControleur_t *app)
 
     app->play = 1;
     app->pause = 0;
+    app->finish = 0;
 
     set_score(modele, 0);
     set_deplay(modele, 0);
@@ -279,6 +283,53 @@ static void on_new_game_pressed(GtkWidget *widget, gpointer data)
     struct AppControleur_t *app = (struct AppControleur_t *) data;
 
     new_game(app);
+
+    UNUSED(widget);
+}
+
+static void on_modal_response(GtkWidget *widget, gpointer data)
+{
+    struct AppControleur_t *app = (struct AppControleur_t *) data;
+
+    if (app->activeModal != NULL)
+    {
+        destroy_modal_controleur(app->activeModal);
+        app->activeModal = NULL;
+    }
+
+    if(!app->finish)
+        app->pause = 0;
+    
+    UNUSED(widget);
+}
+
+static gboolean on_modal_close(GtkWidget *widget, GdkEvent *event, gpointer data)
+{
+    on_modal_response(widget, data);
+    gtk_widget_hide(widget);
+
+    UNUSED(event);
+    return TRUE;
+}
+
+static void on_help_button_pressed(GtkWidget *widget, gpointer data)
+{
+    struct AppControleur_t *app = (struct AppControleur_t *) data;
+
+    ModalControleur *modal = new_modal(TYPE_HELP);
+
+    gtk_menu_item_deselect(GTK_MENU_ITEM(widget));
+
+    if (modal != NULL)
+    {
+        app->pause = 1;
+        app->activeModal = modal;
+
+        modal_on_close(modal, app, on_modal_close);
+        modal_on_response(modal, app, on_modal_response);
+
+        modal_launch(modal);
+    }
 
     UNUSED(widget);
 }
@@ -425,6 +476,16 @@ static void connect_app_event(struct AppControleur_t *app)
         G_OBJECT(get_button_new(app->vue)), "clicked",
         G_CALLBACK(on_new_game_pressed), app
     );
+
+    g_signal_connect(
+        G_OBJECT(get_menu_help(app->vue)), "select",
+        G_CALLBACK(on_help_button_pressed), app
+    );
+
+    g_signal_connect(
+        G_OBJECT(get_menu_help(app->vue)), "activate",
+        G_CALLBACK(on_help_button_pressed), app
+    );
 }
 
 static PieceControleur *generate_piece()
@@ -517,6 +578,7 @@ static void frame_rate(struct AppControleur_t *app)
             if (get_position_y(get_piece_model(get_piece_vue(current))) == 0)
             {
                 app->pause = 1;
+                app->finish = 1;
             }
             else
             {
@@ -563,7 +625,9 @@ struct AppControleur_t *create_app_controleur(void)
 
     result->play = 1;
     result->pause = 0;
+    result->finish = 0;
     result->can_draw = 0;
+    result->activeModal = NULL;
     
     return result;
 }
