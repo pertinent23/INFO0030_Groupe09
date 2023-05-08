@@ -261,7 +261,7 @@ GtkWidget *create_labels(struct AppVue_t *vue)
     GtkWidget *container = gtk_table_new(3, 1, TRUE);
 
     vue->labels.score = gtk_label_new("Score: 0");
-    vue->labels.delay = gtk_label_new("Delay: 0");
+    vue->labels.delay = gtk_label_new("Time: 0");
 
     gtk_table_attach(
         GTK_TABLE(container), vue->labels.score,
@@ -413,6 +413,6 @@ void update_delay_label(struct AppVue_t *vue)
     assert(vue != NULL);
 
     char data[25];
-    sprintf(data, "Delay: %u", get_score(vue->modele));
+    sprintf(data, "Time: %u", get_delay(vue->modele));
     gtk_label_set_label(GTK_LABEL(vue->labels.delay), data);
 }

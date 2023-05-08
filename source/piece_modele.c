@@ -196,7 +196,7 @@ int collision_right(struct PieceModel_t *piece, void ***wall, unsigned int wall_
 
 int collision_left(struct PieceModel_t *piece, void ***wall, unsigned int wall_length, unsigned int h)
 {
-    assert(piece != NULL && wall != NULL && h >= get_position_x(piece));
+    assert(piece != NULL && wall != NULL && h <= get_position_x(piece));
 
     unsigned int x = get_position_x(piece) - h - 1;
     unsigned int a = get_position_y(piece), b = 0;
