@@ -4,12 +4,13 @@
 
 int write_score(char* nom_joueur, int score, char* filename) {
     assert(filename!=NULL && nom_joueur !=NULL) ;
-    FILE* fichier = fopen(filename, "w");
+    FILE* fichier = fopen(filename, "a");
     if (fichier == NULL){
         return 1;
     }else{
-        fprintf(fichier, "joueur : %s, score :  %d", nom_joueur, score);    
+        fprintf(fichier, "joueur : %s, score :  %d \n", nom_joueur, score);    
+        fclose(fichier); 
         return 0;
-        fclose(fichier);
+        
 }
 }
