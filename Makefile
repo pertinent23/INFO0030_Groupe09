@@ -12,6 +12,7 @@ DT=doxygen
 
 # Files
 OUTPUT=tetris_09.tar.gz
+CONFIG=doxygen.config
 
 tetris:
 	cd source && make
@@ -20,11 +21,12 @@ clean:
 	cd source && make clean
 	clear
 
-archive:
+archive: clean
 	$(AT) $(ATFLAGS) $(OUTPUT) *
 
 doc: tetris
 	$(DT) $(CONFIG)
+	make clean
 
 check_memory:
 	valgrind --leak-check=full ./

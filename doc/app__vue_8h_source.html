@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CALCULATRICE GTK:  Fichier source de source/app_vue.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CALCULATRICE GTK
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">La Construction d&#39;un calculatrice avec GTK</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('app__vue_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">app_vue.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="app__vue_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="app__vue_8h.html#abfdb31b042809ac5e5550caee90edb68">    1</a></span>&#160;<span class="preprocessor">#ifndef __APP_VUE__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __APP_VUE__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="app__modele_8h.html">app_modele.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;gtk/gtk.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structAppVue__t.html">AppVue_t</a> <a class="code" href="structAppVue__t.html">AppVue</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<a class="code" href="structAppModele__t.html">AppModele</a> *<a class="code" href="app__vue_8h.html#ae29e58bd29d3a474d98664d807ecb631">get_modele</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">struct </span><a class="code" href="structAppVue__t.html">AppVue_t</a> *<a class="code" href="app__vue_8h.html#a3b70f3c71054834b090644d3466abf2c">create_app_vue</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> <a class="code" href="app__vue_8h.html#aa9a2e75358d349d62545af950227a0b0">destroy_app_vue</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="app__vue_8h.html#acf46a3e78b884e4cb34d044ea7a96b15">create_menu</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="app__vue_8h.html#ae179482c5a3dbbe00d0ab9681beedddb">create_footer</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> <a class="code" href="app__vue_8h.html#a3ee780c79beb3f19e45f11bc8eb2c234">create_grill_side</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="app__vue_8h.html#aeea9ef698b15db008a08cd6bfefaf200">create_options</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="app__vue_8h.html#a6f27a1375b471ebe47cc240978a21479">create_window</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="app__vue_8h.html#a7d40ad25cc6a020ad0f8f69367c01854">create_window_container</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;GtkWidget *<a class="code" href="app__vue_8h.html#a271e197449631a2c967532af6db7f1a0">create_buttons</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;GtkWidget *<a class="code" href="app__vue_8h.html#aed899288305615fa68bef0079ff1102f">create_labels</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;GtkWidget *<a class="code" href="app__vue_8h.html#aceff367089bd83c98b30525f4abda2da">create_arrow</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue, GtkArrowType type);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;GtkWidget *<a class="code" href="app__vue_8h.html#ad17cf443d3821707aaa9652613ce10e4">get_arrow_up</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;GtkWidget *<a class="code" href="app__vue_8h.html#a3e9d4a8f1ee2cae1da1937c8bb7877d5">get_arrow_down</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;GtkWidget *<a class="code" href="app__vue_8h.html#a7f01499c71c05f4f2191cc07b52ccc8c">get_arrow_left</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;GtkWidget *<a class="code" href="app__vue_8h.html#ab01075f3c42a86c7b5f953774317c14f">get_arrow_right</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;GtkWidget *<a class="code" href="app__vue_8h.html#a3b0755c29bd246fa8bf12260fa10b732">get_menu_new</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;GtkWidget *<a class="code" href="app__vue_8h.html#aa9779a34fb42f2cda69888566bba41d8">get_menu_quit</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;GtkWidget *<a class="code" href="app__vue_8h.html#a6a3cd502ab0e1aa3e010be372b8768aa">get_menu_best</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;GtkWidget *<a class="code" href="app__vue_8h.html#a376cff81fcddfb6b64e9d129a86efb46">get_menu_help</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;GtkWidget *<a class="code" href="app__vue_8h.html#a5dd498029793a17cd8ddeade8620f870">get_button_new</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;GtkWidget *<a class="code" href="app__vue_8h.html#a678c6060bd7a42fde2fcd8116d8b90d5">get_button_quit</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;GtkWidget *<a class="code" href="app__vue_8h.html#a4702ca9e5bd61bfa57b4f4fd85bbf530">get_window</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;GtkWidget *<a class="code" href="app__vue_8h.html#a09e3260ee007a0eb141359b14fec7c0b">get_grill</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;GtkWidget *<a class="code" href="app__vue_8h.html#ac603beeb2a63fbc2a80e2a3716970d06">get_window_container</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span> <a class="code" href="app__vue_8h.html#af287f15859a7f154934f332150e327f2">update_score_label</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> <a class="code" href="app__vue_8h.html#ac0635271c27b3dcfde8a53c8aa45499f">update_delay_label</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> <a class="code" href="app__vue_8h.html#ac2ce6856eab7bf7fa273e622bcdf1f6e">build_app_vue</a>(<span class="keyword">struct</span> <a class="code" href="structAppVue__t.html">AppVue_t</a> *vue);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !__APP_VUE__</span></div>
+<div class="ttc" id="aapp__modele_8h_html"><div class="ttname"><a href="app__modele_8h.html">app_modele.h</a></div></div>
+<div class="ttc" id="aapp__vue_8h_html_a09e3260ee007a0eb141359b14fec7c0b"><div class="ttname"><a href="app__vue_8h.html#a09e3260ee007a0eb141359b14fec7c0b">get_grill</a></div><div class="ttdeci">GtkWidget * get_grill(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:336</div></div>
+<div class="ttc" id="aapp__vue_8h_html_a271e197449631a2c967532af6db7f1a0"><div class="ttname"><a href="app__vue_8h.html#a271e197449631a2c967532af6db7f1a0">create_buttons</a></div><div class="ttdeci">GtkWidget * create_buttons(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:233</div></div>
+<div class="ttc" id="aapp__vue_8h_html_a376cff81fcddfb6b64e9d129a86efb46"><div class="ttname"><a href="app__vue_8h.html#a376cff81fcddfb6b64e9d129a86efb46">get_menu_help</a></div><div class="ttdeci">GtkWidget * get_menu_help(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:384</div></div>
+<div class="ttc" id="aapp__vue_8h_html_a3b0755c29bd246fa8bf12260fa10b732"><div class="ttname"><a href="app__vue_8h.html#a3b0755c29bd246fa8bf12260fa10b732">get_menu_new</a></div><div class="ttdeci">GtkWidget * get_menu_new(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:366</div></div>
+<div class="ttc" id="aapp__vue_8h_html_a3b70f3c71054834b090644d3466abf2c"><div class="ttname"><a href="app__vue_8h.html#a3b70f3c71054834b090644d3466abf2c">create_app_vue</a></div><div class="ttdeci">struct AppVue_t * create_app_vue(void)</div><div class="ttdef"><b>Definition:</b> app_vue.c:46</div></div>
+<div class="ttc" id="aapp__vue_8h_html_a3e9d4a8f1ee2cae1da1937c8bb7877d5"><div class="ttname"><a href="app__vue_8h.html#a3e9d4a8f1ee2cae1da1937c8bb7877d5">get_arrow_down</a></div><div class="ttdeci">GtkWidget * get_arrow_down(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:348</div></div>
+<div class="ttc" id="aapp__vue_8h_html_a3ee780c79beb3f19e45f11bc8eb2c234"><div class="ttname"><a href="app__vue_8h.html#a3ee780c79beb3f19e45f11bc8eb2c234">create_grill_side</a></div><div class="ttdeci">void create_grill_side(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:202</div></div>
+<div class="ttc" id="aapp__vue_8h_html_a4702ca9e5bd61bfa57b4f4fd85bbf530"><div class="ttname"><a href="app__vue_8h.html#a4702ca9e5bd61bfa57b4f4fd85bbf530">get_window</a></div><div class="ttdeci">GtkWidget * get_window(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:324</div></div>
+<div class="ttc" id="aapp__vue_8h_html_a5dd498029793a17cd8ddeade8620f870"><div class="ttname"><a href="app__vue_8h.html#a5dd498029793a17cd8ddeade8620f870">get_button_new</a></div><div class="ttdeci">GtkWidget * get_button_new(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:390</div></div>
+<div class="ttc" id="aapp__vue_8h_html_a678c6060bd7a42fde2fcd8116d8b90d5"><div class="ttname"><a href="app__vue_8h.html#a678c6060bd7a42fde2fcd8116d8b90d5">get_button_quit</a></div><div class="ttdeci">GtkWidget * get_button_quit(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:396</div></div>
+<div class="ttc" id="aapp__vue_8h_html_a6a3cd502ab0e1aa3e010be372b8768aa"><div class="ttname"><a href="app__vue_8h.html#a6a3cd502ab0e1aa3e010be372b8768aa">get_menu_best</a></div><div class="ttdeci">GtkWidget * get_menu_best(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:378</div></div>
+<div class="ttc" id="aapp__vue_8h_html_a6f27a1375b471ebe47cc240978a21479"><div class="ttname"><a href="app__vue_8h.html#a6f27a1375b471ebe47cc240978a21479">create_window</a></div><div class="ttdeci">void create_window(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:80</div></div>
+<div class="ttc" id="aapp__vue_8h_html_a7d40ad25cc6a020ad0f8f69367c01854"><div class="ttname"><a href="app__vue_8h.html#a7d40ad25cc6a020ad0f8f69367c01854">create_window_container</a></div><div class="ttdeci">void create_window_container(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:101</div></div>
+<div class="ttc" id="aapp__vue_8h_html_a7f01499c71c05f4f2191cc07b52ccc8c"><div class="ttname"><a href="app__vue_8h.html#a7f01499c71c05f4f2191cc07b52ccc8c">get_arrow_left</a></div><div class="ttdeci">GtkWidget * get_arrow_left(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:354</div></div>
+<div class="ttc" id="aapp__vue_8h_html_aa9779a34fb42f2cda69888566bba41d8"><div class="ttname"><a href="app__vue_8h.html#aa9779a34fb42f2cda69888566bba41d8">get_menu_quit</a></div><div class="ttdeci">GtkWidget * get_menu_quit(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:372</div></div>
+<div class="ttc" id="aapp__vue_8h_html_aa9a2e75358d349d62545af950227a0b0"><div class="ttname"><a href="app__vue_8h.html#aa9a2e75358d349d62545af950227a0b0">destroy_app_vue</a></div><div class="ttdeci">void destroy_app_vue(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:71</div></div>
+<div class="ttc" id="aapp__vue_8h_html_ab01075f3c42a86c7b5f953774317c14f"><div class="ttname"><a href="app__vue_8h.html#ab01075f3c42a86c7b5f953774317c14f">get_arrow_right</a></div><div class="ttdeci">GtkWidget * get_arrow_right(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:360</div></div>
+<div class="ttc" id="aapp__vue_8h_html_ac0635271c27b3dcfde8a53c8aa45499f"><div class="ttname"><a href="app__vue_8h.html#ac0635271c27b3dcfde8a53c8aa45499f">update_delay_label</a></div><div class="ttdeci">void update_delay_label(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:411</div></div>
+<div class="ttc" id="aapp__vue_8h_html_ac2ce6856eab7bf7fa273e622bcdf1f6e"><div class="ttname"><a href="app__vue_8h.html#ac2ce6856eab7bf7fa273e622bcdf1f6e">build_app_vue</a></div><div class="ttdeci">void build_app_vue(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:314</div></div>
+<div class="ttc" id="aapp__vue_8h_html_ac603beeb2a63fbc2a80e2a3716970d06"><div class="ttname"><a href="app__vue_8h.html#ac603beeb2a63fbc2a80e2a3716970d06">get_window_container</a></div><div class="ttdeci">GtkWidget * get_window_container(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:330</div></div>
+<div class="ttc" id="aapp__vue_8h_html_aceff367089bd83c98b30525f4abda2da"><div class="ttname"><a href="app__vue_8h.html#aceff367089bd83c98b30525f4abda2da">create_arrow</a></div><div class="ttdeci">GtkWidget * create_arrow(struct AppVue_t *vue, GtkArrowType type)</div><div class="ttdef"><b>Definition:</b> app_vue.c:279</div></div>
+<div class="ttc" id="aapp__vue_8h_html_acf46a3e78b884e4cb34d044ea7a96b15"><div class="ttname"><a href="app__vue_8h.html#acf46a3e78b884e4cb34d044ea7a96b15">create_menu</a></div><div class="ttdeci">void create_menu(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:118</div></div>
+<div class="ttc" id="aapp__vue_8h_html_ad17cf443d3821707aaa9652613ce10e4"><div class="ttname"><a href="app__vue_8h.html#ad17cf443d3821707aaa9652613ce10e4">get_arrow_up</a></div><div class="ttdeci">GtkWidget * get_arrow_up(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:342</div></div>
+<div class="ttc" id="aapp__vue_8h_html_ae179482c5a3dbbe00d0ab9681beedddb"><div class="ttname"><a href="app__vue_8h.html#ae179482c5a3dbbe00d0ab9681beedddb">create_footer</a></div><div class="ttdeci">void create_footer(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:142</div></div>
+<div class="ttc" id="aapp__vue_8h_html_ae29e58bd29d3a474d98664d807ecb631"><div class="ttname"><a href="app__vue_8h.html#ae29e58bd29d3a474d98664d807ecb631">get_modele</a></div><div class="ttdeci">AppModele * get_modele(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:65</div></div>
+<div class="ttc" id="aapp__vue_8h_html_aed899288305615fa68bef0079ff1102f"><div class="ttname"><a href="app__vue_8h.html#aed899288305615fa68bef0079ff1102f">create_labels</a></div><div class="ttdeci">GtkWidget * create_labels(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:257</div></div>
+<div class="ttc" id="aapp__vue_8h_html_aeea9ef698b15db008a08cd6bfefaf200"><div class="ttname"><a href="app__vue_8h.html#aeea9ef698b15db008a08cd6bfefaf200">create_options</a></div><div class="ttdeci">void create_options(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:216</div></div>
+<div class="ttc" id="aapp__vue_8h_html_af287f15859a7f154934f332150e327f2"><div class="ttname"><a href="app__vue_8h.html#af287f15859a7f154934f332150e327f2">update_score_label</a></div><div class="ttdeci">void update_score_label(struct AppVue_t *vue)</div><div class="ttdef"><b>Definition:</b> app_vue.c:402</div></div>
+<div class="ttc" id="astructAppModele__t_html"><div class="ttname"><a href="structAppModele__t.html">AppModele_t</a></div><div class="ttdef"><b>Definition:</b> app_modele.c:6</div></div>
+<div class="ttc" id="astructAppVue__t_html"><div class="ttname"><a href="structAppVue__t.html">AppVue_t</a></div><div class="ttdef"><b>Definition:</b> app_vue.c:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="app__vue_8h.html">app_vue.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

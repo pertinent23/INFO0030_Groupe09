@@ -1,0 +1,670 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CALCULATRICE GTK: Référence du fichier source/piece_modele.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CALCULATRICE GTK
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">La Construction d&#39;un calculatrice avec GTK</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('piece__modele_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#enum-members">Énumérations</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier piece_modele.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;gtk/gtk.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de piece_modele.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="piece__modele_8h__incl.png" border="0" usemap="#asource_2piece__modele_8h" alt=""/></div>
+<map name="asource_2piece__modele_8h" id="asource_2piece__modele_8h">
+<area shape="rect" title=" " alt="" coords="5,5,177,32"/>
+<area shape="rect" title=" " alt="" coords="51,80,131,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="piece__modele_8h__dep__incl.png" border="0" usemap="#asource_2piece__modele_8hdep" alt=""/></div>
+<map name="asource_2piece__modele_8hdep" id="asource_2piece__modele_8hdep">
+<area shape="rect" title=" " alt="" coords="46,5,218,32"/>
+<area shape="rect" href="app__controleur_8c.html" title=" " alt="" coords="5,379,181,405"/>
+<area shape="rect" href="piece__controleur_8h.html" title=" " alt="" coords="103,155,291,181"/>
+<area shape="rect" href="piece__modele_8c.html" title=" " alt="" coords="108,80,279,107"/>
+<area shape="rect" href="piece__vue_8h.html" title=" " alt="" coords="303,80,449,107"/>
+<area shape="rect" href="app__modele_8h.html" title=" " alt="" coords="130,229,291,256"/>
+<area shape="rect" href="piece__controleur_8c.html" title=" " alt="" coords="316,229,503,256"/>
+<area shape="rect" href="app__modele_8c.html" title=" " alt="" coords="156,304,316,331"/>
+<area shape="rect" href="app__vue_8c.html" title=" " alt="" coords="393,379,527,405"/>
+<area shape="rect" href="app__vue_8h.html" title=" " alt="" coords="340,304,476,331"/>
+<area shape="rect" href="piece__vue_8c.html" title=" " alt="" coords="316,155,463,181"/>
+</map>
+</div>
+</div>
+<p><a href="piece__modele_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ace64ebebabbf0d0ca5509cbd076d5efe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#ace64ebebabbf0d0ca5509cbd076d5efe">SHEMA_EDGES</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:ace64ebebabbf0d0ca5509cbd076d5efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d4a9594ce13ddae08db5d4fc65f2615"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#a0d4a9594ce13ddae08db5d4fc65f2615">GRAVITY_RATE</a>&#160;&#160;&#160;0.1</td></tr>
+<tr class="separator:a0d4a9594ce13ddae08db5d4fc65f2615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae948b423c29b3ec0e14cd09ab958691f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#ae948b423c29b3ec0e14cd09ab958691f">ROTATION_LEVEL</a>&#160;&#160;&#160;90</td></tr>
+<tr class="separator:ae948b423c29b3ec0e14cd09ab958691f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ab2e6cf0ea8c16e53e65f6f1120c0ddf3"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#ab2e6cf0ea8c16e53e65f6f1120c0ddf3">PieceModel</a></td></tr>
+<tr class="separator:ab2e6cf0ea8c16e53e65f6f1120c0ddf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86fbe9919e00f5e231a4795943d360ab"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="piece__modele_8h.html#ab4a89c47b42e4ab2ff8e87cb79f80583">TypePiece_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#a86fbe9919e00f5e231a4795943d360ab">TypePiece</a></td></tr>
+<tr class="separator:a86fbe9919e00f5e231a4795943d360ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:ab4a89c47b42e4ab2ff8e87cb79f80583"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#ab4a89c47b42e4ab2ff8e87cb79f80583">TypePiece_e</a> { <br />
+&#160;&#160;<a class="el" href="piece__modele_8h.html#ab4a89c47b42e4ab2ff8e87cb79f80583a19a1e9d17831c6836baa5737ab8529c9">BATON</a>
+, <a class="el" href="piece__modele_8h.html#ab4a89c47b42e4ab2ff8e87cb79f80583aabec81083b94f521744e24a37ca23657">BLOC</a>
+, <a class="el" href="piece__modele_8h.html#ab4a89c47b42e4ab2ff8e87cb79f80583a601f8082bedaa05d7593fa9cd93a60f3">TE</a>
+, <a class="el" href="piece__modele_8h.html#ab4a89c47b42e4ab2ff8e87cb79f80583afada653f044deceea8e5dd39691338aa">L_NORMAL</a>
+, <br />
+&#160;&#160;<a class="el" href="piece__modele_8h.html#ab4a89c47b42e4ab2ff8e87cb79f80583a14eeaba2aa8c863e8b18798772c92d4e">L_INVERSE</a>
+, <a class="el" href="piece__modele_8h.html#ab4a89c47b42e4ab2ff8e87cb79f80583aff5c3abb6435fa99f7afeb1d02fa7ed1">BIAIS</a>
+, <a class="el" href="piece__modele_8h.html#ab4a89c47b42e4ab2ff8e87cb79f80583a14aebb1b0ef0f36b037ca3a62bc2b89c">BIAIS_INVERSE</a>
+<br />
+ }</td></tr>
+<tr class="separator:ab4a89c47b42e4ab2ff8e87cb79f80583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a6beee58cbac0bc5671c28ae897304635"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#a6beee58cbac0bc5671c28ae897304635">create_piece</a> (<a class="el" href="piece__modele_8h.html#a86fbe9919e00f5e231a4795943d360ab">TypePiece</a> type)</td></tr>
+<tr class="separator:a6beee58cbac0bc5671c28ae897304635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb3bba3834cfcfddd66771ec24907178"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#acb3bba3834cfcfddd66771ec24907178">destroy_piece</a> (struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *piece)</td></tr>
+<tr class="separator:acb3bba3834cfcfddd66771ec24907178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab86810ef4e369b75489f0c55777b1751"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#ab86810ef4e369b75489f0c55777b1751">get_position_x</a> (struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *piece)</td></tr>
+<tr class="separator:ab86810ef4e369b75489f0c55777b1751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4805f73cee02cf6d03b37092a47bebc9"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#a4805f73cee02cf6d03b37092a47bebc9">get_position_y</a> (struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *piece)</td></tr>
+<tr class="separator:a4805f73cee02cf6d03b37092a47bebc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a916d225499e272b4e39c7dff78958129"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#a916d225499e272b4e39c7dff78958129">get_gravity</a> (struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *piece)</td></tr>
+<tr class="separator:a916d225499e272b4e39c7dff78958129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eaec7223c6887fafefd545c62e485b2"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#a9eaec7223c6887fafefd545c62e485b2">get_shema_item</a> (struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *piece, unsigned int x, unsigned int y)</td></tr>
+<tr class="separator:a9eaec7223c6887fafefd545c62e485b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaa08cef6bf2b3eb093c17889c5fae40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#afaa08cef6bf2b3eb093c17889c5fae40">set_position_x</a> (struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *piece, unsigned int x)</td></tr>
+<tr class="separator:afaa08cef6bf2b3eb093c17889c5fae40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c99ee4c851c9fa1b53901ef81c73190"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#a8c99ee4c851c9fa1b53901ef81c73190">set_position_y</a> (struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *piece, unsigned int y)</td></tr>
+<tr class="separator:a8c99ee4c851c9fa1b53901ef81c73190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a2711d8cca3ae408b81e3a47d9f9e81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#a7a2711d8cca3ae408b81e3a47d9f9e81">update_gravity</a> (struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *piece)</td></tr>
+<tr class="separator:a7a2711d8cca3ae408b81e3a47d9f9e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12866c35c92415ddb6e65a8ebefd8396"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#a12866c35c92415ddb6e65a8ebefd8396">collision_right</a> (struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *piece, void ***wall, unsigned int wall_length, unsigned int h)</td></tr>
+<tr class="separator:a12866c35c92415ddb6e65a8ebefd8396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8190e8e5ac97179c61d4a98e22110b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#ae8190e8e5ac97179c61d4a98e22110b3">collision_left</a> (struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *piece, void ***wall, unsigned int wall_length, unsigned int h)</td></tr>
+<tr class="separator:ae8190e8e5ac97179c61d4a98e22110b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ded3e2d2b86d2e2b5912479b181574b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#a1ded3e2d2b86d2e2b5912479b181574b">collision_down</a> (struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *piece, void ***wall, unsigned int wall_length, unsigned int h)</td></tr>
+<tr class="separator:a1ded3e2d2b86d2e2b5912479b181574b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac98de98588ce603614f152aba419ab39"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#ac98de98588ce603614f152aba419ab39">rotate_left</a> (struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *piece)</td></tr>
+<tr class="separator:ac98de98588ce603614f152aba419ab39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eed5afc0330a1d78c69b307aa093d70"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#a8eed5afc0330a1d78c69b307aa093d70">rotate_right</a> (struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *piece)</td></tr>
+<tr class="separator:a8eed5afc0330a1d78c69b307aa093d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43341ea827b9763ae34a0fad387042ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="piece__modele_8h.html#a86fbe9919e00f5e231a4795943d360ab">TypePiece</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="piece__modele_8h.html#a43341ea827b9763ae34a0fad387042ec">get_piece_type</a> (struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *piece)</td></tr>
+<tr class="separator:a43341ea827b9763ae34a0fad387042ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des macros</h2>
+<a id="a0d4a9594ce13ddae08db5d4fc65f2615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d4a9594ce13ddae08db5d4fc65f2615">&#9670;&nbsp;</a></span>GRAVITY_RATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GRAVITY_RATE&#160;&#160;&#160;0.1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae948b423c29b3ec0e14cd09ab958691f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae948b423c29b3ec0e14cd09ab958691f">&#9670;&nbsp;</a></span>ROTATION_LEVEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ROTATION_LEVEL&#160;&#160;&#160;90</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace64ebebabbf0d0ca5509cbd076d5efe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace64ebebabbf0d0ca5509cbd076d5efe">&#9670;&nbsp;</a></span>SHEMA_EDGES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHEMA_EDGES&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des définitions de type</h2>
+<a id="ab2e6cf0ea8c16e53e65f6f1120c0ddf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e6cf0ea8c16e53e65f6f1120c0ddf3">&#9670;&nbsp;</a></span>PieceModel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> <a class="el" href="piece__modele_8h.html#ab2e6cf0ea8c16e53e65f6f1120c0ddf3">PieceModel</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86fbe9919e00f5e231a4795943d360ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86fbe9919e00f5e231a4795943d360ab">&#9670;&nbsp;</a></span>TypePiece</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="piece__modele_8h.html#ab4a89c47b42e4ab2ff8e87cb79f80583">TypePiece_e</a> <a class="el" href="piece__modele_8h.html#a86fbe9919e00f5e231a4795943d360ab">TypePiece</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation du type de l'énumération</h2>
+<a id="ab4a89c47b42e4ab2ff8e87cb79f80583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4a89c47b42e4ab2ff8e87cb79f80583">&#9670;&nbsp;</a></span>TypePiece_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="piece__modele_8h.html#ab4a89c47b42e4ab2ff8e87cb79f80583">TypePiece_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="ab4a89c47b42e4ab2ff8e87cb79f80583a19a1e9d17831c6836baa5737ab8529c9"></a>BATON&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab4a89c47b42e4ab2ff8e87cb79f80583aabec81083b94f521744e24a37ca23657"></a>BLOC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab4a89c47b42e4ab2ff8e87cb79f80583a601f8082bedaa05d7593fa9cd93a60f3"></a>TE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab4a89c47b42e4ab2ff8e87cb79f80583afada653f044deceea8e5dd39691338aa"></a>L_NORMAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab4a89c47b42e4ab2ff8e87cb79f80583a14eeaba2aa8c863e8b18798772c92d4e"></a>L_INVERSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab4a89c47b42e4ab2ff8e87cb79f80583aff5c3abb6435fa99f7afeb1d02fa7ed1"></a>BIAIS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab4a89c47b42e4ab2ff8e87cb79f80583a14aebb1b0ef0f36b037ca3a62bc2b89c"></a>BIAIS_INVERSE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a1ded3e2d2b86d2e2b5912479b181574b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ded3e2d2b86d2e2b5912479b181574b">&#9670;&nbsp;</a></span>collision_down()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int collision_down </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *&#160;</td>
+          <td class="paramname"><em>piece</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void ***&#160;</td>
+          <td class="paramname"><em>wall</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>wall_length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8190e8e5ac97179c61d4a98e22110b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8190e8e5ac97179c61d4a98e22110b3">&#9670;&nbsp;</a></span>collision_left()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int collision_left </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *&#160;</td>
+          <td class="paramname"><em>piece</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void ***&#160;</td>
+          <td class="paramname"><em>wall</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>wall_length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12866c35c92415ddb6e65a8ebefd8396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12866c35c92415ddb6e65a8ebefd8396">&#9670;&nbsp;</a></span>collision_right()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int collision_right </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *&#160;</td>
+          <td class="paramname"><em>piece</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void ***&#160;</td>
+          <td class="paramname"><em>wall</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>wall_length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6beee58cbac0bc5671c28ae897304635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6beee58cbac0bc5671c28ae897304635">&#9670;&nbsp;</a></span>create_piece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a>* create_piece </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="piece__modele_8h.html#a86fbe9919e00f5e231a4795943d360ab">TypePiece</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb3bba3834cfcfddd66771ec24907178"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb3bba3834cfcfddd66771ec24907178">&#9670;&nbsp;</a></span>destroy_piece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void destroy_piece </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *&#160;</td>
+          <td class="paramname"><em>piece</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a916d225499e272b4e39c7dff78958129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a916d225499e272b4e39c7dff78958129">&#9670;&nbsp;</a></span>get_gravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double get_gravity </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *&#160;</td>
+          <td class="paramname"><em>piece</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43341ea827b9763ae34a0fad387042ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43341ea827b9763ae34a0fad387042ec">&#9670;&nbsp;</a></span>get_piece_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="piece__modele_8h.html#a86fbe9919e00f5e231a4795943d360ab">TypePiece</a> get_piece_type </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *&#160;</td>
+          <td class="paramname"><em>piece</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab86810ef4e369b75489f0c55777b1751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab86810ef4e369b75489f0c55777b1751">&#9670;&nbsp;</a></span>get_position_x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int get_position_x </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *&#160;</td>
+          <td class="paramname"><em>piece</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4805f73cee02cf6d03b37092a47bebc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4805f73cee02cf6d03b37092a47bebc9">&#9670;&nbsp;</a></span>get_position_y()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int get_position_y </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *&#160;</td>
+          <td class="paramname"><em>piece</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9eaec7223c6887fafefd545c62e485b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eaec7223c6887fafefd545c62e485b2">&#9670;&nbsp;</a></span>get_shema_item()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int get_shema_item </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *&#160;</td>
+          <td class="paramname"><em>piece</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac98de98588ce603614f152aba419ab39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac98de98588ce603614f152aba419ab39">&#9670;&nbsp;</a></span>rotate_left()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a>* rotate_left </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *&#160;</td>
+          <td class="paramname"><em>piece</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8eed5afc0330a1d78c69b307aa093d70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eed5afc0330a1d78c69b307aa093d70">&#9670;&nbsp;</a></span>rotate_right()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a>* rotate_right </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *&#160;</td>
+          <td class="paramname"><em>piece</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afaa08cef6bf2b3eb093c17889c5fae40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaa08cef6bf2b3eb093c17889c5fae40">&#9670;&nbsp;</a></span>set_position_x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_position_x </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *&#160;</td>
+          <td class="paramname"><em>piece</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c99ee4c851c9fa1b53901ef81c73190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c99ee4c851c9fa1b53901ef81c73190">&#9670;&nbsp;</a></span>set_position_y()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_position_y </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *&#160;</td>
+          <td class="paramname"><em>piece</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a2711d8cca3ae408b81e3a47d9f9e81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a2711d8cca3ae408b81e3a47d9f9e81">&#9670;&nbsp;</a></span>update_gravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void update_gravity </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structPieceModel__t.html">PieceModel_t</a> *&#160;</td>
+          <td class="paramname"><em>piece</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="piece__modele_8h.html">piece_modele.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

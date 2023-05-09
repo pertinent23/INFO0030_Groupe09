@@ -1,0 +1,587 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CALCULATRICE GTK: Référence du fichier source/app_modele.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CALCULATRICE GTK
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">La Construction d&#39;un calculatrice avec GTK</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('app__modele_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier app_modele.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="piece__controleur_8h_source.html">piece_controleur.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="tools_8h_source.html">tools.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de app_modele.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="app__modele_8h__incl.png" border="0" usemap="#asource_2app__modele_8h" alt=""/></div>
+<map name="asource_2app__modele_8h" id="asource_2app__modele_8h">
+<area shape="rect" title=" " alt="" coords="49,5,210,32"/>
+<area shape="rect" href="piece__controleur_8h.html" title=" " alt="" coords="5,80,147,107"/>
+<area shape="rect" href="tools_8h.html" title=" " alt="" coords="177,229,244,256"/>
+<area shape="rect" href="piece__modele_8h.html" title=" " alt="" coords="28,229,153,256"/>
+<area shape="rect" title=" " alt="" coords="51,304,131,331"/>
+<area shape="rect" href="piece__vue_8h.html" title=" " alt="" coords="79,155,179,181"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="app__modele_8h__dep__incl.png" border="0" usemap="#asource_2app__modele_8hdep" alt=""/></div>
+<map name="asource_2app__modele_8hdep" id="asource_2app__modele_8hdep">
+<area shape="rect" title=" " alt="" coords="109,5,270,32"/>
+<area shape="rect" href="app__controleur_8c.html" title=" " alt="" coords="5,155,181,181"/>
+<area shape="rect" href="app__modele_8c.html" title=" " alt="" coords="24,80,184,107"/>
+<area shape="rect" href="app__vue_8c.html" title=" " alt="" coords="261,155,395,181"/>
+<area shape="rect" href="app__vue_8h.html" title=" " alt="" coords="208,80,344,107"/>
+</map>
+</div>
+</div>
+<p><a href="app__modele_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a498d9f026138406895e9a34b504ac6a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#a498d9f026138406895e9a34b504ac6a6">WINDOW_WIDTH</a>&#160;&#160;&#160;550</td></tr>
+<tr class="separator:a498d9f026138406895e9a34b504ac6a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5473cf64fa979b48335079c99532e243"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#a5473cf64fa979b48335079c99532e243">WINDOW_HEIGHT</a>&#160;&#160;&#160;600</td></tr>
+<tr class="separator:a5473cf64fa979b48335079c99532e243"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ad7eabaec25b13210332f857daa9725"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#a2ad7eabaec25b13210332f857daa9725">GRILL_WIDTH</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a2ad7eabaec25b13210332f857daa9725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a419526444749e03f8e272a5704cf32ef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#a419526444749e03f8e272a5704cf32ef">GRILL_HEIGHT</a>&#160;&#160;&#160;15</td></tr>
+<tr class="separator:a419526444749e03f8e272a5704cf32ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece2d65fe4adb051ea037d69eaa7cc46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#aece2d65fe4adb051ea037d69eaa7cc46">GRILL_CELL_SIZE</a>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:aece2d65fe4adb051ea037d69eaa7cc46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4163a0c4b93506b02eb17fe4e1e38ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#aa4163a0c4b93506b02eb17fe4e1e38ad">GRILL_CELL_MARGING</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:aa4163a0c4b93506b02eb17fe4e1e38ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:afe5a38229883f061b7033da8df30db4b"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structAppModele__t.html">AppModele_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#afe5a38229883f061b7033da8df30db4b">AppModele</a></td></tr>
+<tr class="separator:afe5a38229883f061b7033da8df30db4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:af878299c0ef458d67c326f1e277b49db"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#af878299c0ef458d67c326f1e277b49db">create_app</a> (void)</td></tr>
+<tr class="separator:af878299c0ef458d67c326f1e277b49db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea0af41424becd41af8f18b26665ffc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="piece__controleur_8h.html#ac4d0adb01c74112709f72217cc2ca634">PieceControleur</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#a1ea0af41424becd41af8f18b26665ffc">get_current_pieces</a> (struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *app)</td></tr>
+<tr class="separator:a1ea0af41424becd41af8f18b26665ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62997ecc2fcec4172f2f0e69ec314af0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#a62997ecc2fcec4172f2f0e69ec314af0">destroy_app</a> (struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *app)</td></tr>
+<tr class="separator:a62997ecc2fcec4172f2f0e69ec314af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a061d5d5979619ea5bb84526d535c796f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#a061d5d5979619ea5bb84526d535c796f">set_current_pieces</a> (struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *app, <a class="el" href="piece__controleur_8h.html#ac4d0adb01c74112709f72217cc2ca634">PieceControleur</a> *data)</td></tr>
+<tr class="separator:a061d5d5979619ea5bb84526d535c796f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8df89b610070846f9e4a35d526750f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#a3e8df89b610070846f9e4a35d526750f">set_pixel</a> (struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *app, <a class="el" href="tools_8h.html#aac3e3306c8d6fa35e52811dc72029204">Color</a> *color, unsigned int x, unsigned y)</td></tr>
+<tr class="separator:a3e8df89b610070846f9e4a35d526750f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8a426f5b432eb91ea870a1fe5c05a99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tools_8h.html#aac3e3306c8d6fa35e52811dc72029204">Color</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#ae8a426f5b432eb91ea870a1fe5c05a99">get_pixel</a> (struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *app, unsigned int x, unsigned int y)</td></tr>
+<tr class="separator:ae8a426f5b432eb91ea870a1fe5c05a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ee6ebf89f5d8120757ad7e688f2290d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tools_8h.html#aac3e3306c8d6fa35e52811dc72029204">Color</a> ***&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#a0ee6ebf89f5d8120757ad7e688f2290d">get_pixels</a> (struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *app)</td></tr>
+<tr class="separator:a0ee6ebf89f5d8120757ad7e688f2290d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83c1d17c515b4641bda823f416d08ad3"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#a83c1d17c515b4641bda823f416d08ad3">get_grill_width</a> (struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *app)</td></tr>
+<tr class="separator:a83c1d17c515b4641bda823f416d08ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abff9b8d1c192a461f3d5b542fc969288"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#abff9b8d1c192a461f3d5b542fc969288">get_grill_height</a> (struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *app)</td></tr>
+<tr class="separator:abff9b8d1c192a461f3d5b542fc969288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad67aec0b3edd0b22e2099ed575db2618"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#ad67aec0b3edd0b22e2099ed575db2618">set_score</a> (struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *app, unsigned int score)</td></tr>
+<tr class="separator:ad67aec0b3edd0b22e2099ed575db2618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa48e32a2f9742d25f8236aafa5ea9258"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#aa48e32a2f9742d25f8236aafa5ea9258">set_deplay</a> (struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *app, unsigned int delay)</td></tr>
+<tr class="separator:aa48e32a2f9742d25f8236aafa5ea9258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267a64ae4c975c952abfa7c2077a5d56"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#a267a64ae4c975c952abfa7c2077a5d56">get_score</a> (struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *app)</td></tr>
+<tr class="separator:a267a64ae4c975c952abfa7c2077a5d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3968fdcc814d18601c5ed7413bc160e3"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__modele_8h.html#a3968fdcc814d18601c5ed7413bc160e3">get_delay</a> (struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *app)</td></tr>
+<tr class="separator:a3968fdcc814d18601c5ed7413bc160e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des macros</h2>
+<a id="aa4163a0c4b93506b02eb17fe4e1e38ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4163a0c4b93506b02eb17fe4e1e38ad">&#9670;&nbsp;</a></span>GRILL_CELL_MARGING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GRILL_CELL_MARGING&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aece2d65fe4adb051ea037d69eaa7cc46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aece2d65fe4adb051ea037d69eaa7cc46">&#9670;&nbsp;</a></span>GRILL_CELL_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GRILL_CELL_SIZE&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a419526444749e03f8e272a5704cf32ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a419526444749e03f8e272a5704cf32ef">&#9670;&nbsp;</a></span>GRILL_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GRILL_HEIGHT&#160;&#160;&#160;15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ad7eabaec25b13210332f857daa9725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ad7eabaec25b13210332f857daa9725">&#9670;&nbsp;</a></span>GRILL_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GRILL_WIDTH&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5473cf64fa979b48335079c99532e243"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5473cf64fa979b48335079c99532e243">&#9670;&nbsp;</a></span>WINDOW_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WINDOW_HEIGHT&#160;&#160;&#160;600</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a498d9f026138406895e9a34b504ac6a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a498d9f026138406895e9a34b504ac6a6">&#9670;&nbsp;</a></span>WINDOW_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WINDOW_WIDTH&#160;&#160;&#160;550</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des définitions de type</h2>
+<a id="afe5a38229883f061b7033da8df30db4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe5a38229883f061b7033da8df30db4b">&#9670;&nbsp;</a></span>AppModele</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structAppModele__t.html">AppModele_t</a> <a class="el" href="app__modele_8h.html#afe5a38229883f061b7033da8df30db4b">AppModele</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="af878299c0ef458d67c326f1e277b49db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af878299c0ef458d67c326f1e277b49db">&#9670;&nbsp;</a></span>create_app()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structAppModele__t.html">AppModele_t</a>* create_app </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62997ecc2fcec4172f2f0e69ec314af0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62997ecc2fcec4172f2f0e69ec314af0">&#9670;&nbsp;</a></span>destroy_app()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void destroy_app </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *&#160;</td>
+          <td class="paramname"><em>app</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ea0af41424becd41af8f18b26665ffc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea0af41424becd41af8f18b26665ffc">&#9670;&nbsp;</a></span>get_current_pieces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="piece__controleur_8h.html#ac4d0adb01c74112709f72217cc2ca634">PieceControleur</a>* get_current_pieces </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *&#160;</td>
+          <td class="paramname"><em>app</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3968fdcc814d18601c5ed7413bc160e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3968fdcc814d18601c5ed7413bc160e3">&#9670;&nbsp;</a></span>get_delay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int get_delay </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *&#160;</td>
+          <td class="paramname"><em>app</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abff9b8d1c192a461f3d5b542fc969288"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abff9b8d1c192a461f3d5b542fc969288">&#9670;&nbsp;</a></span>get_grill_height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int get_grill_height </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *&#160;</td>
+          <td class="paramname"><em>app</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83c1d17c515b4641bda823f416d08ad3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83c1d17c515b4641bda823f416d08ad3">&#9670;&nbsp;</a></span>get_grill_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int get_grill_width </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *&#160;</td>
+          <td class="paramname"><em>app</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8a426f5b432eb91ea870a1fe5c05a99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8a426f5b432eb91ea870a1fe5c05a99">&#9670;&nbsp;</a></span>get_pixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tools_8h.html#aac3e3306c8d6fa35e52811dc72029204">Color</a>* get_pixel </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *&#160;</td>
+          <td class="paramname"><em>app</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ee6ebf89f5d8120757ad7e688f2290d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ee6ebf89f5d8120757ad7e688f2290d">&#9670;&nbsp;</a></span>get_pixels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tools_8h.html#aac3e3306c8d6fa35e52811dc72029204">Color</a>*** get_pixels </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *&#160;</td>
+          <td class="paramname"><em>app</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a267a64ae4c975c952abfa7c2077a5d56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a267a64ae4c975c952abfa7c2077a5d56">&#9670;&nbsp;</a></span>get_score()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int get_score </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *&#160;</td>
+          <td class="paramname"><em>app</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a061d5d5979619ea5bb84526d535c796f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a061d5d5979619ea5bb84526d535c796f">&#9670;&nbsp;</a></span>set_current_pieces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_current_pieces </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *&#160;</td>
+          <td class="paramname"><em>app</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="piece__controleur_8h.html#ac4d0adb01c74112709f72217cc2ca634">PieceControleur</a> *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa48e32a2f9742d25f8236aafa5ea9258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa48e32a2f9742d25f8236aafa5ea9258">&#9670;&nbsp;</a></span>set_deplay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_deplay </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *&#160;</td>
+          <td class="paramname"><em>app</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>delay</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e8df89b610070846f9e4a35d526750f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e8df89b610070846f9e4a35d526750f">&#9670;&nbsp;</a></span>set_pixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_pixel </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *&#160;</td>
+          <td class="paramname"><em>app</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tools_8h.html#aac3e3306c8d6fa35e52811dc72029204">Color</a> *&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad67aec0b3edd0b22e2099ed575db2618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad67aec0b3edd0b22e2099ed575db2618">&#9670;&nbsp;</a></span>set_score()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_score </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structAppModele__t.html">AppModele_t</a> *&#160;</td>
+          <td class="paramname"><em>app</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>score</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="app__modele_8h.html">app_modele.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

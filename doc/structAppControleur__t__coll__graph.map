@@ -1,0 +1,13 @@
+<map id="AppControleur_t" name="AppControleur_t">
+<area shape="rect" id="node1" title=" " alt="" coords="186,455,313,481"/>
+<area shape="rect" id="node2" href="$structAppVue__t.html" title=" " alt="" coords="140,365,223,392"/>
+<area shape="rect" id="node3" href="$structAppModele__t.html" title=" " alt="" coords="128,276,235,303"/>
+<area shape="rect" id="node4" href="$structPieceControleur__t.html" title=" " alt="" coords="26,187,163,213"/>
+<area shape="rect" id="node5" href="$structPieceVue__t.html" title=" " alt="" coords="48,96,141,123"/>
+<area shape="rect" id="node6" href="$structPieceModel__t.html" title=" " alt="" coords="5,5,115,32"/>
+<area shape="rect" id="node7" href="$structColor__t.html" title=" " alt="" coords="153,5,221,32"/>
+<area shape="rect" id="node8" href="$structModalControleur__t.html" title=" " alt="" coords="247,365,390,392"/>
+<area shape="rect" id="node9" href="$structModalVue__t.html" title=" " alt="" coords="269,276,368,303"/>
+<area shape="rect" id="node10" href="$structModalModele__t.html" title=" " alt="" coords="257,187,380,213"/>
+<area shape="rect" id="node11" href="$structModaleUser__t.html" title=" " alt="" coords="263,96,375,123"/>
+</map>

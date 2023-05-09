@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CALCULATRICE GTK: Référence du fichier source/modal_modele.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CALCULATRICE GTK
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">La Construction d&#39;un calculatrice avec GTK</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('modal__modele_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#enum-members">Énumérations</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier modal_modele.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="modal__modele_8h__dep__incl.png" border="0" usemap="#asource_2modal__modele_8hdep" alt=""/></div>
+<map name="asource_2modal__modele_8hdep" id="asource_2modal__modele_8hdep">
+<area shape="rect" title=" " alt="" coords="175,5,353,32"/>
+<area shape="rect" href="modal__controleur_8h.html" title=" " alt="" coords="100,155,295,181"/>
+<area shape="rect" href="modal__modele_8c.html" title=" " alt="" coords="175,80,353,107"/>
+<area shape="rect" href="modal__vue_8h.html" title=" " alt="" coords="377,80,530,107"/>
+<area shape="rect" href="app__controleur_8c.html" title=" " alt="" coords="5,229,181,256"/>
+<area shape="rect" href="modal__controleur_8c.html" title=" " alt="" coords="206,229,399,256"/>
+<area shape="rect" href="modal__vue_8c.html" title=" " alt="" coords="377,155,529,181"/>
+</map>
+</div>
+</div>
+<p><a href="modal__modele_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structModaleUser__t.html">ModaleUser_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ad9dcd73dd770affdc2097d8cd0aabaf7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modal__modele_8h.html#ad9dcd73dd770affdc2097d8cd0aabaf7">USERNAME_MAX_LENGTH</a>&#160;&#160;&#160;20</td></tr>
+<tr class="separator:ad9dcd73dd770affdc2097d8cd0aabaf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a50abe8d4695217ec7d24d9aad9e00a35"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structModalModele__t.html">ModalModele_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modal__modele_8h.html#a50abe8d4695217ec7d24d9aad9e00a35">ModalModele</a></td></tr>
+<tr class="separator:a50abe8d4695217ec7d24d9aad9e00a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e98ad41e8349d7b32692f9907d4a26b"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structModaleUser__t.html">ModaleUser_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modal__modele_8h.html#a7e98ad41e8349d7b32692f9907d4a26b">ModalUser</a></td></tr>
+<tr class="separator:a7e98ad41e8349d7b32692f9907d4a26b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad22777bddd7ffbfad22834ef0fb94d8d"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="modal__modele_8h.html#a6bbff8511df5a70006191c2b2d621ad2">ModalType_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modal__modele_8h.html#ad22777bddd7ffbfad22834ef0fb94d8d">ModalType</a></td></tr>
+<tr class="separator:ad22777bddd7ffbfad22834ef0fb94d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:a6bbff8511df5a70006191c2b2d621ad2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modal__modele_8h.html#a6bbff8511df5a70006191c2b2d621ad2">ModalType_e</a> { <a class="el" href="modal__modele_8h.html#a6bbff8511df5a70006191c2b2d621ad2a6553a64f2248f811d7441b2089f597d0">TYPE_PLAYER_LIST</a> = 17
+, <a class="el" href="modal__modele_8h.html#a6bbff8511df5a70006191c2b2d621ad2a2e338c98136f3cb01d66646a95294150">TYPE_USERNAME</a>
+, <a class="el" href="modal__modele_8h.html#a6bbff8511df5a70006191c2b2d621ad2a7a19492f38dcbc0d8ef707f49e706f86">TYPE_HELP</a>
+ }</td></tr>
+<tr class="separator:a6bbff8511df5a70006191c2b2d621ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a6ecdc8b3d18c9c02ae2b167999c7df37"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modal__modele_8h.html#a6ecdc8b3d18c9c02ae2b167999c7df37">create_modal_modele</a> (void)</td></tr>
+<tr class="separator:a6ecdc8b3d18c9c02ae2b167999c7df37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9c1b6f25e297710906ad7356e3ddf9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modal__modele_8h.html#ad9c1b6f25e297710906ad7356e3ddf9a">destroy_modal_modele</a> (struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> *modal)</td></tr>
+<tr class="separator:ad9c1b6f25e297710906ad7356e3ddf9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8141c240ad5160cd5c116aa0db0ac578"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modal__modele_8h.html#a8141c240ad5160cd5c116aa0db0ac578">set_username</a> (struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> *modal, char *username)</td></tr>
+<tr class="separator:a8141c240ad5160cd5c116aa0db0ac578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17d28b5b58669d54f18b0db97e0af9ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modal__modele_8h.html#a17d28b5b58669d54f18b0db97e0af9ee">set_modal_type</a> (struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> *modal, <a class="el" href="modal__modele_8h.html#ad22777bddd7ffbfad22834ef0fb94d8d">ModalType</a> type)</td></tr>
+<tr class="separator:a17d28b5b58669d54f18b0db97e0af9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a677a3fe6ae3e015c3f0b3eb79af2b9f4"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modal__modele_8h.html#a677a3fe6ae3e015c3f0b3eb79af2b9f4">get_username</a> (struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> *modal)</td></tr>
+<tr class="separator:a677a3fe6ae3e015c3f0b3eb79af2b9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79d73a4fe3eccb740fa084f6a428b219"><td class="memItemLeft" align="right" valign="top"><a class="el" href="modal__modele_8h.html#a7e98ad41e8349d7b32692f9907d4a26b">ModalUser</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modal__modele_8h.html#a79d73a4fe3eccb740fa084f6a428b219">get_user_list</a> (struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> *modal)</td></tr>
+<tr class="separator:a79d73a4fe3eccb740fa084f6a428b219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cabc52336353688bdf208b1cde28ab7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="modal__modele_8h.html#ad22777bddd7ffbfad22834ef0fb94d8d">ModalType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modal__modele_8h.html#a0cabc52336353688bdf208b1cde28ab7">get_modal_type</a> (struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> *modal)</td></tr>
+<tr class="separator:a0cabc52336353688bdf208b1cde28ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad06d6153c918dfe1572007c197fb8d31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modal__modele_8h.html#ad06d6153c918dfe1572007c197fb8d31">add_user</a> (struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> *modal, <a class="el" href="modal__modele_8h.html#a7e98ad41e8349d7b32692f9907d4a26b">ModalUser</a> *user)</td></tr>
+<tr class="separator:ad06d6153c918dfe1572007c197fb8d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6ab332761161c10e0b25e663fc0e293"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modal__modele_8h.html#ac6ab332761161c10e0b25e663fc0e293">sort_modal_user</a> (struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> *modal)</td></tr>
+<tr class="separator:ac6ab332761161c10e0b25e663fc0e293"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des macros</h2>
+<a id="ad9dcd73dd770affdc2097d8cd0aabaf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9dcd73dd770affdc2097d8cd0aabaf7">&#9670;&nbsp;</a></span>USERNAME_MAX_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define USERNAME_MAX_LENGTH&#160;&#160;&#160;20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des définitions de type</h2>
+<a id="a50abe8d4695217ec7d24d9aad9e00a35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50abe8d4695217ec7d24d9aad9e00a35">&#9670;&nbsp;</a></span>ModalModele</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> <a class="el" href="modal__modele_8h.html#a50abe8d4695217ec7d24d9aad9e00a35">ModalModele</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad22777bddd7ffbfad22834ef0fb94d8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad22777bddd7ffbfad22834ef0fb94d8d">&#9670;&nbsp;</a></span>ModalType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="modal__modele_8h.html#a6bbff8511df5a70006191c2b2d621ad2">ModalType_e</a> <a class="el" href="modal__modele_8h.html#ad22777bddd7ffbfad22834ef0fb94d8d">ModalType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e98ad41e8349d7b32692f9907d4a26b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e98ad41e8349d7b32692f9907d4a26b">&#9670;&nbsp;</a></span>ModalUser</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structModaleUser__t.html">ModaleUser_t</a> <a class="el" href="modal__modele_8h.html#a7e98ad41e8349d7b32692f9907d4a26b">ModalUser</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation du type de l'énumération</h2>
+<a id="a6bbff8511df5a70006191c2b2d621ad2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bbff8511df5a70006191c2b2d621ad2">&#9670;&nbsp;</a></span>ModalType_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="modal__modele_8h.html#a6bbff8511df5a70006191c2b2d621ad2">ModalType_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a6bbff8511df5a70006191c2b2d621ad2a6553a64f2248f811d7441b2089f597d0"></a>TYPE_PLAYER_LIST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6bbff8511df5a70006191c2b2d621ad2a2e338c98136f3cb01d66646a95294150"></a>TYPE_USERNAME&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6bbff8511df5a70006191c2b2d621ad2a7a19492f38dcbc0d8ef707f49e706f86"></a>TYPE_HELP&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ad06d6153c918dfe1572007c197fb8d31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad06d6153c918dfe1572007c197fb8d31">&#9670;&nbsp;</a></span>add_user()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add_user </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> *&#160;</td>
+          <td class="paramname"><em>modal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="modal__modele_8h.html#a7e98ad41e8349d7b32692f9907d4a26b">ModalUser</a> *&#160;</td>
+          <td class="paramname"><em>user</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ecdc8b3d18c9c02ae2b167999c7df37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ecdc8b3d18c9c02ae2b167999c7df37">&#9670;&nbsp;</a></span>create_modal_modele()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structModalModele__t.html">ModalModele_t</a>* create_modal_modele </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9c1b6f25e297710906ad7356e3ddf9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9c1b6f25e297710906ad7356e3ddf9a">&#9670;&nbsp;</a></span>destroy_modal_modele()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void destroy_modal_modele </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> *&#160;</td>
+          <td class="paramname"><em>modal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0cabc52336353688bdf208b1cde28ab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cabc52336353688bdf208b1cde28ab7">&#9670;&nbsp;</a></span>get_modal_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="modal__modele_8h.html#ad22777bddd7ffbfad22834ef0fb94d8d">ModalType</a> get_modal_type </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> *&#160;</td>
+          <td class="paramname"><em>modal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79d73a4fe3eccb740fa084f6a428b219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79d73a4fe3eccb740fa084f6a428b219">&#9670;&nbsp;</a></span>get_user_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="modal__modele_8h.html#a7e98ad41e8349d7b32692f9907d4a26b">ModalUser</a>* get_user_list </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> *&#160;</td>
+          <td class="paramname"><em>modal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a677a3fe6ae3e015c3f0b3eb79af2b9f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a677a3fe6ae3e015c3f0b3eb79af2b9f4">&#9670;&nbsp;</a></span>get_username()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* get_username </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> *&#160;</td>
+          <td class="paramname"><em>modal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17d28b5b58669d54f18b0db97e0af9ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17d28b5b58669d54f18b0db97e0af9ee">&#9670;&nbsp;</a></span>set_modal_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_modal_type </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> *&#160;</td>
+          <td class="paramname"><em>modal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="modal__modele_8h.html#ad22777bddd7ffbfad22834ef0fb94d8d">ModalType</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8141c240ad5160cd5c116aa0db0ac578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8141c240ad5160cd5c116aa0db0ac578">&#9670;&nbsp;</a></span>set_username()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_username </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> *&#160;</td>
+          <td class="paramname"><em>modal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6ab332761161c10e0b25e663fc0e293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6ab332761161c10e0b25e663fc0e293">&#9670;&nbsp;</a></span>sort_modal_user()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sort_modal_user </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structModalModele__t.html">ModalModele_t</a> *&#160;</td>
+          <td class="paramname"><em>modal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="modal__modele_8h.html">modal_modele.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

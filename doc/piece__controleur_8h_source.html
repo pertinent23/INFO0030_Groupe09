@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CALCULATRICE GTK:  Fichier source de source/piece_controleur.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CALCULATRICE GTK
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">La Construction d&#39;un calculatrice avec GTK</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('piece__controleur_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">piece_controleur.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="piece__controleur_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="piece__controleur_8h.html#ac4d0adb01c74112709f72217cc2ca634">    1</a></span>&#160;<span class="preprocessor">#ifndef __PIECE_CONTROLEUR__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __PIECE_CONTROLEUR__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="piece__modele_8h.html">piece_modele.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="piece__vue_8h.html">piece_vue.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;gtk/gtk.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structPieceControleur__t.html">PieceControleur_t</a> <a class="code" href="structPieceControleur__t.html">PieceControleur</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">struct </span><a class="code" href="structPieceControleur__t.html">PieceControleur_t</a> *<a class="code" href="piece__controleur_8h.html#a9c0905c2a4ee7a885176e796d5efdd60">create_piece_controleur</a>(<a class="code" href="piece__modele_8h.html#a86fbe9919e00f5e231a4795943d360ab">TypePiece</a> type);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<a class="code" href="structPieceVue__t.html">PieceVue</a> *<a class="code" href="piece__controleur_8h.html#a8f94ab061d5920bd55d7be19fdf33269">get_piece_vue</a>(<span class="keyword">struct</span> <a class="code" href="structPieceControleur__t.html">PieceControleur_t</a> *controleur);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="piece__controleur_8h.html#a3c51657f5b165b72725363b60fb41e16">draw_case</a>(cairo_t *context, <a class="code" href="structColor__t.html">Color</a> *color, <span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> gravity, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> edges, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> line);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="piece__controleur_8h.html#a488fc019c7f249fd4217b894970e10a0">draw_piece</a>(<span class="keyword">struct</span> <a class="code" href="structPieceControleur__t.html">PieceControleur_t</a> *piece, cairo_t *context, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> edges, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> line);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> <a class="code" href="piece__controleur_8h.html#adf47354f188c9e23653a30fd115e1f22">destroy_piece_controleur</a>(<span class="keyword">struct</span> <a class="code" href="structPieceControleur__t.html">PieceControleur_t</a> *controleur);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !__PIECE_CONTROLEUR__</span></div>
+<div class="ttc" id="apiece__controleur_8h_html_a3c51657f5b165b72725363b60fb41e16"><div class="ttname"><a href="piece__controleur_8h.html#a3c51657f5b165b72725363b60fb41e16">draw_case</a></div><div class="ttdeci">void draw_case(cairo_t *context, Color *color, double x, double y, double gravity, unsigned int edges, unsigned int line)</div><div class="ttdef"><b>Definition:</b> piece_controleur.c:40</div></div>
+<div class="ttc" id="apiece__controleur_8h_html_a488fc019c7f249fd4217b894970e10a0"><div class="ttname"><a href="piece__controleur_8h.html#a488fc019c7f249fd4217b894970e10a0">draw_piece</a></div><div class="ttdeci">void draw_piece(struct PieceControleur_t *piece, cairo_t *context, unsigned int edges, unsigned int line)</div><div class="ttdef"><b>Definition:</b> piece_controleur.c:56</div></div>
+<div class="ttc" id="apiece__controleur_8h_html_a8f94ab061d5920bd55d7be19fdf33269"><div class="ttname"><a href="piece__controleur_8h.html#a8f94ab061d5920bd55d7be19fdf33269">get_piece_vue</a></div><div class="ttdeci">PieceVue * get_piece_vue(struct PieceControleur_t *controleur)</div><div class="ttdef"><b>Definition:</b> piece_controleur.c:34</div></div>
+<div class="ttc" id="apiece__controleur_8h_html_a9c0905c2a4ee7a885176e796d5efdd60"><div class="ttname"><a href="piece__controleur_8h.html#a9c0905c2a4ee7a885176e796d5efdd60">create_piece_controleur</a></div><div class="ttdeci">struct PieceControleur_t * create_piece_controleur(TypePiece type)</div><div class="ttdef"><b>Definition:</b> piece_controleur.c:12</div></div>
+<div class="ttc" id="apiece__controleur_8h_html_adf47354f188c9e23653a30fd115e1f22"><div class="ttname"><a href="piece__controleur_8h.html#adf47354f188c9e23653a30fd115e1f22">destroy_piece_controleur</a></div><div class="ttdeci">void destroy_piece_controleur(struct PieceControleur_t *controleur)</div><div class="ttdef"><b>Definition:</b> piece_controleur.c:76</div></div>
+<div class="ttc" id="apiece__modele_8h_html"><div class="ttname"><a href="piece__modele_8h.html">piece_modele.h</a></div></div>
+<div class="ttc" id="apiece__modele_8h_html_a86fbe9919e00f5e231a4795943d360ab"><div class="ttname"><a href="piece__modele_8h.html#a86fbe9919e00f5e231a4795943d360ab">TypePiece</a></div><div class="ttdeci">enum TypePiece_e TypePiece</div></div>
+<div class="ttc" id="apiece__vue_8h_html"><div class="ttname"><a href="piece__vue_8h.html">piece_vue.h</a></div></div>
+<div class="ttc" id="astructColor__t_html"><div class="ttname"><a href="structColor__t.html">Color_t</a></div><div class="ttdef"><b>Definition:</b> tools.h:8</div></div>
+<div class="ttc" id="astructPieceControleur__t_html"><div class="ttname"><a href="structPieceControleur__t.html">PieceControleur_t</a></div><div class="ttdef"><b>Definition:</b> piece_controleur.c:5</div></div>
+<div class="ttc" id="astructPieceVue__t_html"><div class="ttname"><a href="structPieceVue__t.html">PieceVue_t</a></div><div class="ttdef"><b>Definition:</b> piece_vue.c:6</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="piece__controleur_8h.html">piece_controleur.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

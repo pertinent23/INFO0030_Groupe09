@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CALCULATRICE GTK:  Fichier source de source/modal_modele.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CALCULATRICE GTK
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">La Construction d&#39;un calculatrice avec GTK</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('modal__modele_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">modal_modele.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="modal__modele_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="modal__modele_8h.html#a50abe8d4695217ec7d24d9aad9e00a35">    1</a></span>&#160;<span class="preprocessor">#ifndef __MODAL_MODELE__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __MODAL_MODELE__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="modal__modele_8h.html#ad9dcd73dd770affdc2097d8cd0aabaf7">    4</a></span>&#160;<span class="preprocessor">#define USERNAME_MAX_LENGTH 20</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structModalModele__t.html">ModalModele_t</a> <a class="code" href="structModalModele__t.html">ModalModele</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structModaleUser__t.html">    8</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structModaleUser__t.html">ModaleUser_t</a>{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structModaleUser__t.html#afb031993254e26727a55c913faa62934">    9</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="structModaleUser__t.html#afb031993254e26727a55c913faa62934">username</a>[<a class="code" href="modal__modele_8h.html#ad9dcd73dd770affdc2097d8cd0aabaf7">USERNAME_MAX_LENGTH</a> + 1];</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structModaleUser__t.html#aabf76f053c50f7e1f97fb5bf66ccb9a1">   10</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structModaleUser__t.html#aabf76f053c50f7e1f97fb5bf66ccb9a1">score</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structModaleUser__t.html#aa49c6e70346ef1fed38e4cb4a7dc3237">   11</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structModaleUser__t.html">ModaleUser_t</a> *<a class="code" href="structModaleUser__t.html#aa49c6e70346ef1fed38e4cb4a7dc3237">next</a>, *<a class="code" href="structModaleUser__t.html#a16be28b0a800cfd73a4a701c270af56c">prev</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="modal__modele_8h.html#a7e98ad41e8349d7b32692f9907d4a26b">   12</a></span>&#160;} <a class="code" href="modal__modele_8h.html#a7e98ad41e8349d7b32692f9907d4a26b">ModalUser</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="modal__modele_8h.html#a6bbff8511df5a70006191c2b2d621ad2">   14</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="modal__modele_8h.html#a6bbff8511df5a70006191c2b2d621ad2">ModalType_e</a>{</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="modal__modele_8h.html#a6bbff8511df5a70006191c2b2d621ad2a6553a64f2248f811d7441b2089f597d0">   15</a></span>&#160;    <a class="code" href="modal__modele_8h.html#a6bbff8511df5a70006191c2b2d621ad2a6553a64f2248f811d7441b2089f597d0">TYPE_PLAYER_LIST</a> = 17, <a class="code" href="modal__modele_8h.html#a6bbff8511df5a70006191c2b2d621ad2a2e338c98136f3cb01d66646a95294150">TYPE_USERNAME</a>, <a class="code" href="modal__modele_8h.html#a6bbff8511df5a70006191c2b2d621ad2a7a19492f38dcbc0d8ef707f49e706f86">TYPE_HELP</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="modal__modele_8h.html#ad22777bddd7ffbfad22834ef0fb94d8d">   16</a></span>&#160;} <a class="code" href="modal__modele_8h.html#ad22777bddd7ffbfad22834ef0fb94d8d">ModalType</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">struct </span><a class="code" href="structModalModele__t.html">ModalModele_t</a> *<a class="code" href="modal__modele_8h.html#a6ecdc8b3d18c9c02ae2b167999c7df37">create_modal_modele</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="modal__modele_8h.html#ad9c1b6f25e297710906ad7356e3ddf9a">destroy_modal_modele</a>(<span class="keyword">struct</span> <a class="code" href="structModalModele__t.html">ModalModele_t</a> *modal);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="modal__modele_8h.html#a8141c240ad5160cd5c116aa0db0ac578">set_username</a>(<span class="keyword">struct</span> <a class="code" href="structModalModele__t.html">ModalModele_t</a> *modal, <span class="keywordtype">char</span> *<a class="code" href="structModalModele__t.html#a30c6b322be806606c387434b6b68aa14">username</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> <a class="code" href="modal__modele_8h.html#a17d28b5b58669d54f18b0db97e0af9ee">set_modal_type</a>(<span class="keyword">struct</span> <a class="code" href="structModalModele__t.html">ModalModele_t</a> *modal, <a class="code" href="modal__modele_8h.html#ad22777bddd7ffbfad22834ef0fb94d8d">ModalType</a> <a class="code" href="structModalModele__t.html#a24a4a331c5aed45b1eb630e74992c97d">type</a>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="modal__modele_8h.html#a677a3fe6ae3e015c3f0b3eb79af2b9f4">get_username</a>(<span class="keyword">struct</span> <a class="code" href="structModalModele__t.html">ModalModele_t</a> *modal);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="structModaleUser__t.html">ModalUser</a> *<a class="code" href="modal__modele_8h.html#a79d73a4fe3eccb740fa084f6a428b219">get_user_list</a>(<span class="keyword">struct</span> <a class="code" href="structModalModele__t.html">ModalModele_t</a> *modal);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<a class="code" href="modal__modele_8h.html#ad22777bddd7ffbfad22834ef0fb94d8d">ModalType</a> <a class="code" href="modal__modele_8h.html#a0cabc52336353688bdf208b1cde28ab7">get_modal_type</a>(<span class="keyword">struct</span> <a class="code" href="structModalModele__t.html">ModalModele_t</a> *modal);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> <a class="code" href="modal__modele_8h.html#ad06d6153c918dfe1572007c197fb8d31">add_user</a>(<span class="keyword">struct</span> <a class="code" href="structModalModele__t.html">ModalModele_t</a> *modal, <a class="code" href="structModaleUser__t.html">ModalUser</a> *user);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> <a class="code" href="modal__modele_8h.html#ac6ab332761161c10e0b25e663fc0e293">sort_modal_user</a>(<span class="keyword">struct</span> <a class="code" href="structModalModele__t.html">ModalModele_t</a> *modal);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !__MODAL_MODELE__</span></div>
+<div class="ttc" id="amodal__modele_8h_html_a0cabc52336353688bdf208b1cde28ab7"><div class="ttname"><a href="modal__modele_8h.html#a0cabc52336353688bdf208b1cde28ab7">get_modal_type</a></div><div class="ttdeci">ModalType get_modal_type(struct ModalModele_t *modal)</div><div class="ttdef"><b>Definition:</b> modal_modele.c:83</div></div>
+<div class="ttc" id="amodal__modele_8h_html_a17d28b5b58669d54f18b0db97e0af9ee"><div class="ttname"><a href="modal__modele_8h.html#a17d28b5b58669d54f18b0db97e0af9ee">set_modal_type</a></div><div class="ttdeci">void set_modal_type(struct ModalModele_t *modal, ModalType type)</div><div class="ttdef"><b>Definition:</b> modal_modele.c:77</div></div>
+<div class="ttc" id="amodal__modele_8h_html_a677a3fe6ae3e015c3f0b3eb79af2b9f4"><div class="ttname"><a href="modal__modele_8h.html#a677a3fe6ae3e015c3f0b3eb79af2b9f4">get_username</a></div><div class="ttdeci">char * get_username(struct ModalModele_t *modal)</div><div class="ttdef"><b>Definition:</b> modal_modele.c:55</div></div>
+<div class="ttc" id="amodal__modele_8h_html_a6bbff8511df5a70006191c2b2d621ad2"><div class="ttname"><a href="modal__modele_8h.html#a6bbff8511df5a70006191c2b2d621ad2">ModalType_e</a></div><div class="ttdeci">ModalType_e</div><div class="ttdef"><b>Definition:</b> modal_modele.h:14</div></div>
+<div class="ttc" id="amodal__modele_8h_html_a6bbff8511df5a70006191c2b2d621ad2a2e338c98136f3cb01d66646a95294150"><div class="ttname"><a href="modal__modele_8h.html#a6bbff8511df5a70006191c2b2d621ad2a2e338c98136f3cb01d66646a95294150">TYPE_USERNAME</a></div><div class="ttdeci">@ TYPE_USERNAME</div><div class="ttdef"><b>Definition:</b> modal_modele.h:15</div></div>
+<div class="ttc" id="amodal__modele_8h_html_a6bbff8511df5a70006191c2b2d621ad2a6553a64f2248f811d7441b2089f597d0"><div class="ttname"><a href="modal__modele_8h.html#a6bbff8511df5a70006191c2b2d621ad2a6553a64f2248f811d7441b2089f597d0">TYPE_PLAYER_LIST</a></div><div class="ttdeci">@ TYPE_PLAYER_LIST</div><div class="ttdef"><b>Definition:</b> modal_modele.h:15</div></div>
+<div class="ttc" id="amodal__modele_8h_html_a6bbff8511df5a70006191c2b2d621ad2a7a19492f38dcbc0d8ef707f49e706f86"><div class="ttname"><a href="modal__modele_8h.html#a6bbff8511df5a70006191c2b2d621ad2a7a19492f38dcbc0d8ef707f49e706f86">TYPE_HELP</a></div><div class="ttdeci">@ TYPE_HELP</div><div class="ttdef"><b>Definition:</b> modal_modele.h:15</div></div>
+<div class="ttc" id="amodal__modele_8h_html_a6ecdc8b3d18c9c02ae2b167999c7df37"><div class="ttname"><a href="modal__modele_8h.html#a6ecdc8b3d18c9c02ae2b167999c7df37">create_modal_modele</a></div><div class="ttdeci">struct ModalModele_t * create_modal_modele(void)</div><div class="ttdef"><b>Definition:</b> modal_modele.c:12</div></div>
+<div class="ttc" id="amodal__modele_8h_html_a79d73a4fe3eccb740fa084f6a428b219"><div class="ttname"><a href="modal__modele_8h.html#a79d73a4fe3eccb740fa084f6a428b219">get_user_list</a></div><div class="ttdeci">ModalUser * get_user_list(struct ModalModele_t *modal)</div><div class="ttdef"><b>Definition:</b> modal_modele.c:62</div></div>
+<div class="ttc" id="amodal__modele_8h_html_a7e98ad41e8349d7b32692f9907d4a26b"><div class="ttname"><a href="modal__modele_8h.html#a7e98ad41e8349d7b32692f9907d4a26b">ModalUser</a></div><div class="ttdeci">struct ModaleUser_t ModalUser</div></div>
+<div class="ttc" id="amodal__modele_8h_html_a8141c240ad5160cd5c116aa0db0ac578"><div class="ttname"><a href="modal__modele_8h.html#a8141c240ad5160cd5c116aa0db0ac578">set_username</a></div><div class="ttdeci">void set_username(struct ModalModele_t *modal, char *username)</div><div class="ttdef"><b>Definition:</b> modal_modele.c:49</div></div>
+<div class="ttc" id="amodal__modele_8h_html_ac6ab332761161c10e0b25e663fc0e293"><div class="ttname"><a href="modal__modele_8h.html#ac6ab332761161c10e0b25e663fc0e293">sort_modal_user</a></div><div class="ttdeci">void sort_modal_user(struct ModalModele_t *modal)</div><div class="ttdef"><b>Definition:</b> modal_modele.c:89</div></div>
+<div class="ttc" id="amodal__modele_8h_html_ad06d6153c918dfe1572007c197fb8d31"><div class="ttname"><a href="modal__modele_8h.html#ad06d6153c918dfe1572007c197fb8d31">add_user</a></div><div class="ttdeci">void add_user(struct ModalModele_t *modal, ModalUser *user)</div><div class="ttdef"><b>Definition:</b> modal_modele.c:68</div></div>
+<div class="ttc" id="amodal__modele_8h_html_ad22777bddd7ffbfad22834ef0fb94d8d"><div class="ttname"><a href="modal__modele_8h.html#ad22777bddd7ffbfad22834ef0fb94d8d">ModalType</a></div><div class="ttdeci">enum ModalType_e ModalType</div></div>
+<div class="ttc" id="amodal__modele_8h_html_ad9c1b6f25e297710906ad7356e3ddf9a"><div class="ttname"><a href="modal__modele_8h.html#ad9c1b6f25e297710906ad7356e3ddf9a">destroy_modal_modele</a></div><div class="ttdeci">void destroy_modal_modele(struct ModalModele_t *modal)</div><div class="ttdef"><b>Definition:</b> modal_modele.c:26</div></div>
+<div class="ttc" id="amodal__modele_8h_html_ad9dcd73dd770affdc2097d8cd0aabaf7"><div class="ttname"><a href="modal__modele_8h.html#ad9dcd73dd770affdc2097d8cd0aabaf7">USERNAME_MAX_LENGTH</a></div><div class="ttdeci">#define USERNAME_MAX_LENGTH</div><div class="ttdef"><b>Definition:</b> modal_modele.h:4</div></div>
+<div class="ttc" id="astructModalModele__t_html"><div class="ttname"><a href="structModalModele__t.html">ModalModele_t</a></div><div class="ttdef"><b>Definition:</b> modal_modele.c:6</div></div>
+<div class="ttc" id="astructModalModele__t_html_a24a4a331c5aed45b1eb630e74992c97d"><div class="ttname"><a href="structModalModele__t.html#a24a4a331c5aed45b1eb630e74992c97d">ModalModele_t::type</a></div><div class="ttdeci">ModalType type</div><div class="ttdef"><b>Definition:</b> modal_modele.c:7</div></div>
+<div class="ttc" id="astructModalModele__t_html_a30c6b322be806606c387434b6b68aa14"><div class="ttname"><a href="structModalModele__t.html#a30c6b322be806606c387434b6b68aa14">ModalModele_t::username</a></div><div class="ttdeci">char * username</div><div class="ttdef"><b>Definition:</b> modal_modele.c:9</div></div>
+<div class="ttc" id="astructModaleUser__t_html"><div class="ttname"><a href="structModaleUser__t.html">ModaleUser_t</a></div><div class="ttdef"><b>Definition:</b> modal_modele.h:8</div></div>
+<div class="ttc" id="astructModaleUser__t_html_a16be28b0a800cfd73a4a701c270af56c"><div class="ttname"><a href="structModaleUser__t.html#a16be28b0a800cfd73a4a701c270af56c">ModaleUser_t::prev</a></div><div class="ttdeci">struct ModaleUser_t * prev</div><div class="ttdef"><b>Definition:</b> modal_modele.h:11</div></div>
+<div class="ttc" id="astructModaleUser__t_html_aa49c6e70346ef1fed38e4cb4a7dc3237"><div class="ttname"><a href="structModaleUser__t.html#aa49c6e70346ef1fed38e4cb4a7dc3237">ModaleUser_t::next</a></div><div class="ttdeci">struct ModaleUser_t * next</div><div class="ttdef"><b>Definition:</b> modal_modele.h:11</div></div>
+<div class="ttc" id="astructModaleUser__t_html_aabf76f053c50f7e1f97fb5bf66ccb9a1"><div class="ttname"><a href="structModaleUser__t.html#aabf76f053c50f7e1f97fb5bf66ccb9a1">ModaleUser_t::score</a></div><div class="ttdeci">unsigned int score</div><div class="ttdef"><b>Definition:</b> modal_modele.h:10</div></div>
+<div class="ttc" id="astructModaleUser__t_html_afb031993254e26727a55c913faa62934"><div class="ttname"><a href="structModaleUser__t.html#afb031993254e26727a55c913faa62934">ModaleUser_t::username</a></div><div class="ttdeci">char username[USERNAME_MAX_LENGTH+1]</div><div class="ttdef"><b>Definition:</b> modal_modele.h:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="modal__modele_8h.html">modal_modele.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -15,7 +15,6 @@ LDFLAGS=-lm
 EXEC=tetris
 MODULES=tools.c piece_modele.c piece_controleur.c piece_vue.c modal_modele.c modal_vue.c modal_controleur.c app_modele.c app_vue.c app_controleur.c main.c
 OBJECTS=tools.o piece_modele.o piece_controleur.o piece_vue.o modal_modele.o modal_vue.o modal_controleur.o app_modele.o app_vue.o app_controleur.o main.o
-CONFIG=doxygen.config
 
 #GTK+
 GTK_FLAGS=pkg-config --cflags
