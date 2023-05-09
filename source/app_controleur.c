@@ -314,16 +314,43 @@ static gboolean on_modal_close(GtkWidget *widget, GdkEvent *event, gpointer data
 
 static void on_help_button_pressed(GtkWidget *widget, gpointer data)
 {
+    gtk_menu_item_deselect(GTK_MENU_ITEM(widget));
+
     struct AppControleur_t *app = (struct AppControleur_t *) data;
 
     ModalControleur *modal = new_modal(TYPE_HELP);
-
-    gtk_menu_item_deselect(GTK_MENU_ITEM(widget));
 
     if (modal != NULL)
     {
         app->pause = 1;
         app->activeModal = modal;
+
+        modal_on_close(modal, app, on_modal_close);
+        modal_on_response(modal, app, on_modal_response);
+
+        modal_launch(modal);
+    }
+
+    UNUSED(widget);
+}
+
+static void on_best_button_pressed(GtkWidget *widget, gpointer data)
+{
+    gtk_menu_item_deselect(GTK_MENU_ITEM(widget));
+
+    struct AppControleur_t *app = (struct AppControleur_t *) data;
+
+    ModalControleur *modal = new_modal(TYPE_PLAYER_LIST);
+    ModalVue *modal_v = get_modal_vue(modal);
+    ModalModele *modal_m = get_modal_modele(modal_v);
+
+    if (modal != NULL)
+    {
+        app->pause = 1;
+        app->activeModal = modal;
+
+        sort_modal_user(modal_m);
+        add_users(modal_v);
 
         modal_on_close(modal, app, on_modal_close);
         modal_on_response(modal, app, on_modal_response);
@@ -486,6 +513,11 @@ static void connect_app_event(struct AppControleur_t *app)
         G_OBJECT(get_menu_help(app->vue)), "activate",
         G_CALLBACK(on_help_button_pressed), app
     );
+
+    g_signal_connect(
+        G_OBJECT(get_menu_best(app->vue)), "activate",
+        G_CALLBACK(on_best_button_pressed), app
+    );
 }
 
 static PieceControleur *generate_piece()
@@ -557,6 +589,7 @@ static void frame_rate(struct AppControleur_t *app)
         current = generate_piece();
         set_current_pieces(get_modele(app->vue), current);
     }
+    
 
     if (app->can_draw)
     {
@@ -564,7 +597,6 @@ static void frame_rate(struct AppControleur_t *app)
 
         PieceModel *piece_m = get_piece_model(get_piece_vue(current));
         
-
         if (!is_down_collision(app, piece_m))
         {
             update_gravity(
@@ -579,6 +611,18 @@ static void frame_rate(struct AppControleur_t *app)
             {
                 app->pause = 1;
                 app->finish = 1;
+
+                /*ModalControleur *modal = new_modal(TYPE_USERNAME);
+
+                if (modal != NULL)
+                {
+                    app->activeModal = modal;
+
+                    //modal_on_close(modal, app, on_modal_close);
+                    modal_on_response(modal, app, on_modal_response);
+
+                    modal_launch(modal);
+                }*/
             }
             else
             {

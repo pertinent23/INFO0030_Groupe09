@@ -75,6 +75,7 @@ void add_user(struct ModalModele_t *modal, ModalUser *user)
 {
     assert(modal != modal);
     user->next = modal->users;
+    modal->users->prev = user;
     modal->users = user;
 }
 
@@ -88,4 +89,45 @@ ModalType get_modal_type(struct ModalModele_t *modal)
 {
     assert(modal != NULL);
     return modal->type;
+}
+
+void sort_modal_user(struct ModalModele_t *modal)
+{
+    assert(modal != NULL);
+
+    if (modal->users != NULL)
+    {
+        unsigned int permutation = -1;
+        ModalUser *users, *tmp1, *tmp2;
+
+        while (permutation != 0)
+        {
+            permutation = 0;
+            users = modal->users;
+            while (users->next)
+            {
+                if (users->next->score > users->score)
+                {
+                    tmp1 = users;
+                    tmp2 = users->next;
+
+                    tmp1->next = tmp2->next;
+                    tmp2->prev = tmp1->prev;
+                    tmp1->prev = tmp2;
+                    tmp2->next = tmp1;
+
+                    users = tmp2;
+
+                    permutation++;
+                }
+
+                users = users->next;
+            }
+
+            while (users->prev)
+                users = users->prev;
+
+            modal->users = users;
+        }
+    }
 }

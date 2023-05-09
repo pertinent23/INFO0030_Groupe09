@@ -27,7 +27,8 @@
         "istream": "c",
         "ostream": "c",
         "piece_controleur.h": "c",
-        "modal_vue.h": "c"
+        "modal_vue.h": "c",
+        "sstream": "c"
     },
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/**",

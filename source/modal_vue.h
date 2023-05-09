@@ -4,10 +4,10 @@
 #include "modal_modele.h"
 #include <gtk/gtk.h>
 
-#define HELP_MODAL_WIDTH 250
+#define HELP_MODAL_WIDTH 200
 #define HELP_MODAL_HEIGHT 100
 
-#define USERNAME_MODAL_WIDTH 170
+#define USERNAME_MODAL_WIDTH 250
 #define USERNAME_MODAL_HEIGHT 250
 
 #define USERS_MODAL_WIDTH 400
@@ -24,6 +24,7 @@ ModalModele *get_modal_modele(struct ModalVue_t *modal);
 void init_for_best_score(struct ModalVue_t *modal);
 void init_for_help(struct ModalVue_t *modal);
 void init_for_username(struct ModalVue_t *modal);
+void add_users(struct ModalVue_t *modal);
 
 GtkWidget *get_modal_window(struct ModalVue_t *modal);
 GtkWidget *get_modal_button(struct ModalVue_t *modal);

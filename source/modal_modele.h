@@ -8,7 +8,7 @@ typedef struct ModalModele_t ModalModele;
 typedef struct ModaleUser_t{
     char username[20];
     unsigned int score;
-    struct ModaleUser_t *next;
+    struct ModaleUser_t *next, *prev;
 } ModalUser;
 
 typedef enum ModalType_e{
@@ -30,5 +30,7 @@ ModalUser *get_user_list(struct ModalModele_t *modal);
 ModalType get_modal_type(struct ModalModele_t *modal);
 
 void add_user(struct ModalModele_t *modal, ModalUser *user);
+
+void sort_modal_user(struct ModalModele_t *modal);
 
 #endif // !__MODAL_MODELE__
