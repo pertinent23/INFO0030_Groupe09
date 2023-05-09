@@ -27,6 +27,37 @@ struct AppControleur_t{
     GtkWidget *arrow_right;
 };
 
+static int add_score(char* filename, const char *player, int score) {
+    assert(filename!=NULL && player!=NULL) ;
+    FILE *file = fopen(filename, "a");
+
+    if (file == NULL)
+        return 1;
+
+    fprintf(file, "%s %u\n", player, score);    
+    fclose(file); 
+
+    return 0;
+}
+
+static ModalUser *read_score(FILE *file)
+{
+    ModalUser *result = malloc(sizeof(ModalUser));
+
+    if (result == NULL)
+        return NULL;
+    
+    result->next = NULL;
+    result->prev = NULL;
+
+    if (fscanf(file, "%s %u", result->username, &result->score) != EOF)
+        return result;
+    
+    free(result);
+
+    return NULL;
+}
+
 static void clear_grill(cairo_t *cairo)
 {
     cairo_set_source_rgb(
@@ -287,6 +318,43 @@ static void on_new_game_pressed(GtkWidget *widget, gpointer data)
     UNUSED(widget);
 }
 
+static void on_username_modal_response(GtkWidget *widget, gpointer data)
+{
+    struct AppControleur_t *app = (struct AppControleur_t *) data;
+
+    if (app->activeModal != NULL)
+    {
+        ModalVue *modal = get_modal_vue(app->activeModal);
+        if (is_valid_username(modal))
+        {
+            set_error(modal, "");
+            add_score(SCORE_FILE, get_username_from_entry(modal), get_score(get_modele(app->vue)));
+            destroy_modal_controleur(app->activeModal);
+            app->activeModal = NULL;
+            new_game(app);
+        }
+        else
+        {
+            set_error(modal, "Pseudo not valid");
+        }
+    }
+    else if(!app->finish)
+    {
+        app->pause = 0;
+    }
+    
+    UNUSED(widget);
+}
+
+static gboolean on_username_modal_close(GtkWidget *widget, GdkEvent *event, gpointer data)
+{
+    on_username_modal_response(widget, data);
+    gtk_widget_hide(widget);
+
+    UNUSED(event);
+    return TRUE;
+}
+
 static void on_modal_response(GtkWidget *widget, gpointer data)
 {
     struct AppControleur_t *app = (struct AppControleur_t *) data;
@@ -341,13 +409,29 @@ static void on_best_button_pressed(GtkWidget *widget, gpointer data)
     struct AppControleur_t *app = (struct AppControleur_t *) data;
 
     ModalControleur *modal = new_modal(TYPE_PLAYER_LIST);
-    ModalVue *modal_v = get_modal_vue(modal);
-    ModalModele *modal_m = get_modal_modele(modal_v);
 
     if (modal != NULL)
     {
+        ModalVue *modal_v = get_modal_vue(modal);
+        ModalModele *modal_m = get_modal_modele(modal_v);
+
         app->pause = 1;
         app->activeModal = modal;
+
+        FILE *file = fopen(SCORE_FILE, "r");
+
+        if (file != NULL)
+        {
+            ModalUser *user;
+
+            do{
+                user = read_score(file);
+                if (user != NULL)
+                    add_user(modal_m, user);
+            }while(user != NULL);
+
+            fclose(file);
+        }
 
         sort_modal_user(modal_m);
         add_users(modal_v);
@@ -612,17 +696,17 @@ static void frame_rate(struct AppControleur_t *app)
                 app->pause = 1;
                 app->finish = 1;
 
-                /*ModalControleur *modal = new_modal(TYPE_USERNAME);
+                ModalControleur *modal = new_modal(TYPE_USERNAME);
 
                 if (modal != NULL)
                 {
                     app->activeModal = modal;
 
-                    //modal_on_close(modal, app, on_modal_close);
-                    modal_on_response(modal, app, on_modal_response);
+                    modal_on_close(modal, app, on_username_modal_close);
+                    modal_on_response(modal, app, on_username_modal_response);
 
                     modal_launch(modal);
-                }*/
+                }
             }
             else
             {

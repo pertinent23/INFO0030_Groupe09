@@ -2,6 +2,7 @@
 
 #include <stdlib.h>
 #include <assert.h>
+#include <string.h>
 
 enum{
     COLUMN_ID,
@@ -95,7 +96,7 @@ void init_for_username(struct ModalVue_t *modal)
 
     gtk_table_attach(
         GTK_TABLE(modal->container), modal->username_widget.error,
-        1, 2, 3, 4, GTK_EXPAND|GTK_FILL, GTK_EXPAND|GTK_FILL, 0, 0
+        1, 4, 3, 4, GTK_EXPAND|GTK_FILL, GTK_EXPAND|GTK_FILL, 0, 0
     );
 
     gtk_table_attach(
@@ -115,7 +116,7 @@ void add_users(struct ModalVue_t *modal)
     */
 
     GtkTreeIter iter;
-    unsigned int id = 0;
+    unsigned int id = 1;
     ModalUser *user = get_user_list(modal->modele);
     GtkListStore *list = gtk_list_store_new(NUM_COLUMNS, G_TYPE_UINT, G_TYPE_STRING, G_TYPE_UINT);
 
@@ -124,6 +125,7 @@ void add_users(struct ModalVue_t *modal)
         gtk_list_store_append(list, &iter);
         gtk_list_store_set(list, &iter, COLUMN_ID, id, COLUMN_PSEUDO, user->username, COLUMN_SCORE, user->score, -1);
         user = user->next;
+        id++;
     }
 
     /**
@@ -233,4 +235,35 @@ GtkWidget *get_modal_username_field(struct ModalVue_t *modal)
 {
     assert(modal != NULL);
     return modal->username_widget.field;
+}
+
+const char *get_username_from_entry(struct ModalVue_t *modal)
+{
+    assert(modal != NULL);
+
+    return gtk_entry_get_text(GTK_ENTRY(modal->username_widget.field));
+}
+
+void set_error(struct ModalVue_t *modal, const char *error)
+{
+    assert(modal != NULL);
+    gtk_label_set_label(GTK_LABEL(modal->username_widget.error), error);
+}
+
+int is_valid_username(struct ModalVue_t *modal)
+{
+    assert(modal != NULL);
+
+    const char *username = get_username_from_entry(modal);
+
+    if (strlen(username)<3)
+        return 0;
+    
+    for (int i = 0; i < (int) strlen(username); i++)
+    {
+        if (username[i] == ' ' || username[i] == '\n' || username[i] == '\t')
+            return 0;
+    }
+
+    return 1;
 }

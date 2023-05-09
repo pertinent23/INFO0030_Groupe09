@@ -6,7 +6,7 @@
 typedef struct ModalModele_t ModalModele;
 
 typedef struct ModaleUser_t{
-    char username[20];
+    char username[USERNAME_MAX_LENGTH + 1];
     unsigned int score;
     struct ModaleUser_t *next, *prev;
 } ModalUser;

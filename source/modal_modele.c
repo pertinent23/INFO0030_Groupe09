@@ -29,26 +29,20 @@ void destroy_modal_modele(struct ModalModele_t *modal)
 
     if(modal->users != NULL)
     {
-        ModalUser *user, *tmp;
+        ModalUser *user = modal->users, *tmp;
 
         while (user->next)
         {
             tmp = user;
             user = user->next;
-
-            free(tmp->username);
             free(tmp);
         }
 
-        free(user->username);
         free(user);
     }
 
     if(modal->username != NULL)
-    {
         free(modal->username);
-    }
-
     free(modal);
 }
 
@@ -73,9 +67,10 @@ ModalUser *get_user_list(struct ModalModele_t *modal)
 
 void add_user(struct ModalModele_t *modal, ModalUser *user)
 {
-    assert(modal != modal);
+    assert(modal != NULL);
     user->next = modal->users;
-    modal->users->prev = user;
+    if(modal->users != NULL)
+        modal->users->prev = user;
     modal->users = user;
 }
 
@@ -97,14 +92,14 @@ void sort_modal_user(struct ModalModele_t *modal)
 
     if (modal->users != NULL)
     {
-        unsigned int permutation = -1;
+        int permutation = -1;
         ModalUser *users, *tmp1, *tmp2;
 
         while (permutation != 0)
         {
             permutation = 0;
             users = modal->users;
-            while (users->next)
+            while (users->next != NULL)
             {
                 if (users->next->score > users->score)
                 {
@@ -116,12 +111,14 @@ void sort_modal_user(struct ModalModele_t *modal)
                     tmp1->prev = tmp2;
                     tmp2->next = tmp1;
 
-                    users = tmp2;
+                    users = tmp1;
 
                     permutation++;
                 }
-
-                users = users->next;
+                else
+                {
+                    users = users->next;   
+                }
             }
 
             while (users->prev)

@@ -30,4 +30,10 @@ GtkWidget *get_modal_window(struct ModalVue_t *modal);
 GtkWidget *get_modal_button(struct ModalVue_t *modal);
 GtkWidget *get_modal_username_field(struct ModalVue_t *modal);
 
+const char *get_username_from_entry(struct ModalVue_t *modal);
+
+int is_valid_username(struct ModalVue_t *modal);
+
+void set_error(struct ModalVue_t *modal, const char *error);
+
 #endif // !__MODAL_VUE__
