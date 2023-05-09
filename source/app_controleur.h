@@ -3,7 +3,7 @@
 
 #include <gtk/gtk.h>
 
-#define CLOCK 10
+#define CLOCK 40
 #define SCORE_FILE "score.txt"
 
 typedef struct AppControleur_t AppControleur;

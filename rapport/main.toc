@@ -1,0 +1,11 @@
+\babel@toc {nil}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{3}{}%
+\contentsline {section}{\numberline {2}Architecture}{3}{}%
+\contentsline {subsection}{\numberline {2.1}short}{3}{}%
+\contentsline {subsection}{\numberline {2.2}short}{3}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}short}{3}{}%
+\contentsline {section}{\numberline {3}Structures de Données}{3}{}%
+\contentsline {section}{\numberline {4}Algorithmes}{3}{}%
+\contentsline {section}{\numberline {5}Interface Graphique}{4}{}%
+\contentsline {section}{\numberline {6}Gestion du Code}{6}{}%
+\contentsline {section}{\numberline {7}Conclusion}{6}{}%
