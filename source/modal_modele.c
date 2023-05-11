@@ -2,6 +2,7 @@
 
 #include <stdlib.h>
 #include <assert.h>
+#include <string.h>
 
 struct ModalModele_t{
     ModalType type;
@@ -86,45 +87,30 @@ ModalType get_modal_type(struct ModalModele_t *modal)
     return modal->type;
 }
 
-void sort_modal_user(struct ModalModele_t *modal)
-{
-    assert(modal != NULL);
+void swap_user( ModalUser* m1, ModalUser* m2){
+    int val_score = m1->score;
+    m1->score = m2->score;
+    m2->score = val_score;
 
-    if (modal->users != NULL)
-    {
-        int permutation = -1;
-        ModalUser *users, *tmp1, *tmp2;
+    char tmp[USERNAME_MAX_LENGTH + 1]; 
+    strcpy(tmp, m1->username); 
+    strcpy(m1->username, m2->username); 
+    strcpy(m2->username, tmp); 
 
-        while (permutation != 0)
-        {
-            permutation = 0;
-            users = modal->users;
-            while (users->next != NULL)
-            {
-                if (users->next->score > users->score)
-                {
-                    tmp1 = users;
-                    tmp2 = users->next;
+}
 
-                    tmp1->next = tmp2->next;
-                    tmp2->prev = tmp1->prev;
-                    tmp1->prev = tmp2;
-                    tmp2->next = tmp1;
-
-                    users = tmp1;
-
-                    permutation++;
-                }
-                else
-                {
-                    users = users->next;   
-                }
+void sort_modele(struct ModalModele_t *modal){
+    int swapped = 1;
+    while (swapped == 1){
+        swapped = 0;
+        ModalUser* tmp = modal-> users;
+        while(tmp->next != NULL){
+            if ( tmp ->score > tmp ->next->score ){
+                swap_user(tmp, tmp->next);
+                swapped = 1;
             }
-
-            while (users->prev)
-                users = users->prev;
-
-            modal->users = users;
+            tmp = tmp -> next;
         }
     }
 }
+
