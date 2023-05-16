@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.3.11)  9 MAY 2023 07:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.3.11)  9 MAY 2023 07:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -301,8 +301,8 @@ Overfull \hbox (0.63878pt too wide) in paragraph at lines 24--111
 ./structures.tex:15: Missing $ inserted.
 <inserted text> 
                 $
-l.15         \item AppModel_
-                            t
+l.15     \item AppModel_
+                        t
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -313,8 +313,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.16         \item
-                   AppVue_t
+l.16     \item
+               AppVue_t
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -325,8 +325,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.16         \item A
-                    ppVue_t
+l.16     \item A
+                ppVue_t
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -337,8 +337,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.16         \item A
-                    ppVue_t
+l.16     \item A
+                ppVue_t
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -349,24 +349,24 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.17         \item
-                   AppControleur_t
+l.17     \item
+               AppControleur_t
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ./structures.tex:17: Missing $ inserted.
 <inserted text> 
                 $
-l.17         \item A
-                    ppControleur_t
+l.17     \item A
+                ppControleur_t
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ./structures.tex:17: Missing } inserted.
 <inserted text> 
                 }
-l.17         \item A
-                    ppControleur_t
+l.17     \item A
+                ppControleur_t
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -376,8 +376,8 @@ my insertion and my current dilemma will both disappear.
 ./structures.tex:17: Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.17         \item A
-                    ppControleur_t
+l.17     \item A
+                ppControleur_t
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -387,8 +387,8 @@ deleted material, e.g., by typing `I$}'.
 ./structures.tex:17: Missing $ inserted.
 <inserted text> 
                 $
-l.17         \item AppControleur_
-                                 t
+l.17     \item AppControleur_
+                             t
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -428,32 +428,141 @@ l.18     \item M
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-./structures.tex:19: Undefined control sequence.
-l.19         \iitem
-                    ModalModel_t
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-./structures.tex:20: Undefined control sequence.
-l.20         \iitem
-                    ModalVue_t
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+./structures.tex:19: LaTeX Error: Command \item invalid in math mode.
 
-./structures.tex:21: Undefined control sequence.
-l.21         \iitem
-                    ModalControleur_t
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19     \item
+               ModalModel_t
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./structures.tex:19: Missing $ inserted.
+<inserted text> 
+                $
+l.19     \item M
+                odalModel_t
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./structures.tex:19: Missing } inserted.
+<inserted text> 
+                }
+l.19     \item M
+                odalModel_t
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./structures.tex:19: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.19     \item M
+                odalModel_t
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./structures.tex:19: Missing $ inserted.
+<inserted text> 
+                $
+l.19     \item ModalModel_
+                          t
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./structures.tex:20: LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20     \item
+               ModalVue_t
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./structures.tex:20: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20     \item M
+                odalVue_t
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./structures.tex:20: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20     \item M
+                odalVue_t
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./structures.tex:21: LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21     \item
+               ModalControleur_t
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./structures.tex:21: Missing $ inserted.
+<inserted text> 
+                $
+l.21     \item M
+                odalControleur_t
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./structures.tex:21: Missing } inserted.
+<inserted text> 
+                }
+l.21     \item M
+                odalControleur_t
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./structures.tex:21: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.21     \item M
+                odalControleur_t
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./structures.tex:21: Missing $ inserted.
+<inserted text> 
+                $
+l.21     \item ModalControleur_
+                               t
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
 
 ./structures.tex:22: LaTeX Error: Command \item invalid in math mode.
@@ -467,35 +576,76 @@ l.22     \item
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-./structures.tex:22: Missing $ inserted.
+
+./structures.tex:22: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22     \item P
+                iece
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./structures.tex:22: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22     \item P
+                iece
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./structures.tex:23: LaTeX Error: Command \end{itemize} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{itemize}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./structures.tex:23: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{itemize}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./structures.tex:23: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{itemize}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./structures.tex:23: Missing $ inserted.
 <inserted text> 
                 $
-l.22     \item P
-                iece
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./structures.tex:22: Missing } inserted.
-<inserted text> 
-                }
-l.22     \item P
-                iece
+l.23 \end{itemize}
+                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
-
-./structures.tex:22: Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.22     \item P
-                iece
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
 
 ) (./algorithmes.tex
 Overfull \hbox (4.15028pt too wide) in paragraph at lines 12--14
@@ -555,7 +705,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  55i,7n,62p,297b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/franck/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/franck/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/franck/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/franck/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/franck/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/franck/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/franck/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/franck/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
-Output written on main.pdf (6 pages, 343656 bytes).
+Output written on main.pdf (6 pages, 343491 bytes).
 PDF statistics:
  253 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream

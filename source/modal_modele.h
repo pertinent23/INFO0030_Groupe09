@@ -31,8 +31,8 @@ ModalType get_modal_type(struct ModalModele_t *modal);
 
 void add_user(struct ModalModele_t *modal, ModalUser *user);
 
-void swap_user( ModalUser* m1, ModalUser* m2)
+void swap_user( ModalUser* m1, ModalUser* m2);
 
-void sort_modele(struct ModalModele_t *modal);
+void sort_modal_user(struct ModalModele_t *modal);
 
 #endif // !__MODAL_MODELE__

@@ -99,7 +99,7 @@ void swap_user( ModalUser* m1, ModalUser* m2){
 
 }
 
-void sort_modele(struct ModalModele_t *modal){
+void sort_modal_user(struct ModalModele_t *modal){
     int swapped = 1;
     while (swapped == 1){
         swapped = 0;
